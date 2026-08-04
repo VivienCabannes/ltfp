@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "phase": "Phase 1 coarse dependency map",
+  "created_at": "2026-08-03T14:32:13Z",
+  "finalized_at": "2026-08-03T19:31:14Z",
+  "scope": {
+    "book": "Learning Theory from First Principles, all 15 chapters; the book has no appendix section",
+    "exercises": "All 209 exercises in the book, including Chapters 10-15, reconciled with the separate Chapters 1-9 exercise supplement"
+  },
+  "sources": [
+    {
+      "path": "sources/ltfp_book.pdf",
+      "title_page_date": "2025-05-26",
+      "sha256": "5e7840c545d24aaf21a1ea5fbddd76e78153de0a9a952f56810a8618a9fc9e06"
+    },
+    {
+      "path": "sources/ltfp_exercises.pdf",
+      "title_page_date": "2025-12-01",
+      "sha256": "b68b440586765f123ae02cc9d8ac17b057cb01266db5358d92786ba0a1b3ab3d"
+    }
+  ],
+  "artifact": {
+    "path": "sources/phase1_graph.json",
+    "sha256": "cbf4e871f971fd9c590219073389a41e9977dcbe11ebf2111fca1fd6eadd2758",
+    "tracked": true,
+    "live_path_at_finalization": "graph.json",
+    "runtime_snapshot": ".autoform/snapshots/phase1-converged.json",
+    "runtime_snapshot_tracked": false,
+    "all_three_byte_identical_at_finalization": true
+  },
+  "invariants": {
+    "validator": "python3 scripts/check_plan.py sources/phase1_graph.json --project-root . --require-grounding --projection incremental --content-free-snapshot",
+    "nodes": 116,
+    "edges": 461,
+    "tiers": [1],
+    "dependency_free_roots": 4,
+    "weak_components": 1,
+    "acyclic": true,
+    "all_missing_nodes_reach_mathlib_root": true,
+    "mathlib_status_counts": {
+      "in-mathlib": 5,
+      "partial": 46,
+      "missing": 65
+    },
+    "exercise_identifiers": 209,
+    "exercise_owner_member_links": 225,
+    "exercise_coverage_validator": "python3 scripts/check_exercise_coverage.py"
+  },
+  "review": {
+    "scope": "Planning graph structure, source coverage, exercise ownership, and Mathlib correspondence only",
+    "waves": [
+      {
+        "date": "2026-08-03",
+        "role": "Mathlib checker",
+        "reviewers": "partitioned chapter audits",
+        "result": "Every cluster was checked against pinned Mathlib revision 905b95818eb32af7874a58b427f50c1711a5e96c and assigned evidence-backed status, declarations, file, and notes."
+      },
+      {
+        "date": "2026-08-03",
+        "role": "Graph reviewer",
+        "reviewers": "partitioned dependency and ownership reviews",
+        "result": "Dependency, grouping, duplicate-ownership, and exercise-mapping findings were corrected and revalidated after each merge."
+      },
+      {
+        "date": "2026-08-03",
+        "role": "Holistic reviewer",
+        "reviewers": 3,
+        "result": "First independent whole-graph wave found one remaining exact Strong convexity duplicate; it was removed."
+      },
+      {
+        "date": "2026-08-03",
+        "role": "Holistic reviewer",
+        "reviewers": 3,
+        "result": "Second independent convergence wave found no remaining Phase 1 graph blocker."
+      },
+      {
+        "date": "2026-08-03",
+        "role": "Mathlib checker",
+        "reviewers": "independent Phase 2 root-readiness audit",
+        "result": "All four dependency-free roots remained in Mathlib. Corrected the defining Frechet-derivative and operator-norm file attributions, added exact gradient, Taylor, product-law, and iid declarations, and recorded scope hypotheses before freezing the tracked snapshot."
+      }
+    ],
+    "resolved_findings": [
+      "Split mixed optimization, kernel-computation, Bayesian, and lower-bound clusters into coherent owners.",
+      "Removed duplicate ownership of Bregman divergence, condition number, continuity equation, empirical-risk minimization, Donsker-Varadhan, and Strong convexity content.",
+      "Separated Khintchine inequalities from online regret lower bounds.",
+      "Corrected orthogonal matching-pursuit, kernel-ridge smoothing, Exercise 11.7, and Exercise 12.6 ownership.",
+      "Reconciled every exercise identifier and added explicit exercise markers to every mapped graph member.",
+      "Corrected the root Mathlib attribution and scope notes for Frechet derivatives, Taylor formulas, product laws, orthogonal projection, and the continuous-linear-map operator norm."
+    ],
+    "result": "Converged for Phase 1; awaiting user approval before Phase 2."
+  },
+  "lean_proof_jury": {
+    "status": "unchecked",
+    "proof_worker_runs": 0,
+    "note": "No Phase 2 Lean statement or proof worker has run. This attestation makes no source-faithfulness, proof-integrity, or code-quality claim about Lean declarations."
+  },
+  "remaining_gate": "Authorize cited primary sources, independent proofs, or book-only theorem scope for proof gaps before Phase 2."
+}

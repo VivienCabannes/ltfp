@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "tier": 2,
+  "content_complete_parents": [
+    {
+      "parent": "Convex analysis and normed-space geometry",
+      "fingerprint_sha256": "832bcdbb93f77b4601c33ca39733f35d4100457bba0dddb7aa36fee3f9d6d6e1"
+    },
+    {
+      "parent": "Differential and integral calculus",
+      "fingerprint_sha256": "34fdd7c4b2bc4551624d1824dca36c27cc826ded115bd577bf03356a2d7a12f7"
+    },
+    {
+      "parent": "Finite-dimensional linear algebra and spectral theory",
+      "fingerprint_sha256": "cd540514ce423750bdda4e76a718f346bbc56013009a5ec4d5dc79df422f03aa"
+    },
+    {
+      "parent": "Measure-theoretic probability and conditional expectation",
+      "fingerprint_sha256": "21216c110ec078f0efb4004291c741aace8efa0feccd056762182e92393d671e"
+    }
+  ]
+}

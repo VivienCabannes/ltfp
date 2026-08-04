@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "approved_at": "2026-08-04T08:16:43Z",
+  "phase1_graph": {
+    "path": "sources/phase1_graph.json",
+    "sha256": "cbf4e871f971fd9c590219073389a41e9977dcbe11ebf2111fca1fd6eadd2758"
+  },
+  "decisions": {
+    "phase1_roadmap_approved": true,
+    "external_proof_source_policy": "pinned-primary-sources"
+  },
+  "external_source_requirements": {
+    "pin_before_graph_use": true,
+    "required_metadata": [
+      "edition_or_commit",
+      "url",
+      "retrieval_date",
+      "sha256"
+    ],
+    "axioms_permitted": false,
+    "exact_hypotheses_required": true
+  },
+  "user_response": "1. Yes; 2. Yes"
+}

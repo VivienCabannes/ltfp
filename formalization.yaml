@@ -1,0 +1,63 @@
+version: v0.3
+project:
+  name: LearningTheoryFromFirstPrinciples
+  authors:
+  - Vivien Cabannes
+  license: Apache-2.0
+sources:
+- title: Learning Theory from First Principles
+  authors:
+  - Francis Bach
+  id: ISBN 978-0-262-04944-3; official PDF SHA-256 5e7840c545d24aaf21a1ea5fbddd76e78153de0a9a952f56810a8618a9fc9e06
+  type: textbook
+  license: Copyright licensed exclusively to The MIT Press; no permissive source license stated
+  author_contacted: n/a
+- title: Learning Theory from First Principles - Exercises
+  authors:
+  - Francis Bach
+  id: https://www.di.ens.fr/~fbach/ltfp_exercises.pdf; SHA-256 b68b440586765f123ae02cc9d8ac17b057cb01266db5358d92786ba0a1b3ab3d
+  type: textbook supplement
+  license: No permissive source license stated
+  author_contacted: n/a
+automation:
+  methods:
+  - method: agent
+    models: []
+    framework: autoform
+    tool_setup: 'autoform 0.4.4: plan graph -> prover backends (claude/aristotle/codex/openai)
+      -> kernel honesty gate -> review jury'
+    cost:
+      wall_time: ''
+      spend_usd: ''
+      hardware: ''
+    tokens:
+      input: 0
+      output: 0
+      runs: 0
+    notes: 'Phase 1 used Autoform for planning, Mathlib correspondence audits,
+      and graph review. The token and run counters above are proof-worker
+      telemetry: no proof-worker run has started. Planning-agent telemetry is
+      not represented by these counters.'
+  spend_usd: ''
+  notes: 'Phase 1 planning completed on 2026-08-03. The user approved the
+    attested roadmap and pinned-primary-source policy on 2026-08-04; Phase 2
+    statement-level planning is authorized. No proof-worker run has started.'
+status:
+  scope: Entire 15-chapter book (which has no appendix section), plus the separate
+    exercise collection and the additional exercises embedded in Chapters 10-15
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+  main_results: []
+fidelity:
+  divergences: ''
+review:
+  status: unchecked
+  reviewers: []
+  notes: 'This status is the Lean proof jury, which has not run. The Phase 1
+    planning graph was independently reviewed and is attested separately in
+    sources/phase1_review_attestation.json; that graph review is not evidence
+    of source-faithfulness, proof-integrity, or code-quality review of Lean
+    declarations.'
+alignment: {}
+acknowledgements: ''

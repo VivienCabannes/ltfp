@@ -1,0 +1,45 @@
+{
+  "sources": [
+    {
+      "id": "ltfp-book-2025-05-26",
+      "title": "Learning Theory from First Principles",
+      "author": "Francis Bach",
+      "publisher": "The MIT Press",
+      "local_file": "sources/ltfp_book.pdf",
+      "format": "pdf",
+      "canonical_url": "https://www.di.ens.fr/~fbach/ltfp_book.pdf",
+      "edition_or_commit": "2025-05-26",
+      "url": "https://www.di.ens.fr/~fbach/ltfp_book.pdf",
+      "publisher_url": "https://mitpress.mit.edu/9780262049443/learning-theory-from-first-principles/",
+      "retrieved_at": "2026-08-03",
+      "retrieval_date": "2026-08-03",
+      "title_page_date": "2025-05-26",
+      "pages": 488,
+      "bytes": 12490444,
+      "sha256": "5e7840c545d24aaf21a1ea5fbddd76e78153de0a9a952f56810a8618a9fc9e06",
+      "rights": "Copyright licensed exclusively to The MIT Press; no permissive redistribution license is stated."
+    },
+    {
+      "id": "ltfp-exercises-2025-12-01",
+      "title": "Learning Theory from First Principles - Exercises",
+      "author": "Francis Bach",
+      "local_file": "sources/ltfp_exercises.pdf",
+      "format": "pdf",
+      "canonical_url": "https://www.di.ens.fr/~fbach/ltfp_exercises.pdf",
+      "edition_or_commit": "2025-12-01",
+      "url": "https://www.di.ens.fr/~fbach/ltfp_exercises.pdf",
+      "retrieved_at": "2026-08-03",
+      "retrieval_date": "2026-08-03",
+      "title_page_date": "2025-12-01",
+      "pages": 44,
+      "bytes": 385935,
+      "sha256": "b68b440586765f123ae02cc9d8ac17b057cb01266db5358d92786ba0a1b3ab3d",
+      "rights": "No permissive redistribution license is stated."
+    }
+  ],
+  "arxiv": {
+    "checked_at": "2026-08-03",
+    "exact_title_results": 0,
+    "note": "No arXiv version was found; the author-hosted final PDF is the canonical formalization source."
+  }
+}

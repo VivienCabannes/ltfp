@@ -1,0 +1,121 @@
+name: Build LearningTheoryFromFirstPrinciples
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - '.github/workflows/build-project.yml'
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'graph.json'
+      - 'formalization.yaml'
+      - 'scripts/**'
+      - 'sources/**'
+      - 'informal_content/**'
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - '.github/workflows/build-project.yml'
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'graph.json'
+      - 'formalization.yaml'
+      - 'scripts/**'
+      - 'sources/**'
+      - 'informal_content/**'
+  workflow_dispatch: # Allow manual triggering of the workflow from the GitHub Actions interface
+
+# Cancel previous runs if a new commit is pushed to the same PR or branch
+concurrency:
+  group: ${{ github.ref }}  # Group runs by the ref (branch or PR)
+  cancel-in-progress: true  # Cancel any ongoing runs in the same group
+
+permissions:
+  contents: read
+
+jobs:
+  build_project:
+    runs-on: ubuntu-latest
+    name: Build project
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
+
+      - name: Validate formalization plan
+        run: |
+          python3 scripts/check_plan.py --self-test
+          python3 scripts/check_plan.py --require-grounding --projection incremental
+          python3 scripts/check_phase2_approval.py --self-test
+          python3 scripts/check_phase2_approval.py
+          python3 scripts/check_exercise_coverage.py --self-test
+          python3 scripts/check_exercise_coverage.py
+          python3 scripts/update_exercise_mapping.py --self-test
+          python3 scripts/check_informal_content.py --self-test
+          python3 scripts/check_informal_content.py --mode incremental \
+            --scope sources/phase2_content_scope.json
+          python3 scripts/check_plan.py sources/phase1_graph.json --project-root . \
+            --require-grounding --projection incremental --content-free-snapshot
+          python3 scripts/check_lean_hygiene.py --skip-compiled-audit
+          bash scripts/update.sh --self-test
+
+      - name: Verify Phase 1 attestation
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          attestation = json.loads(Path("sources/phase1_review_attestation.json").read_text())
+          artifact = attestation["artifact"]
+          assert artifact["tracked"] is True
+          artifact_path = Path(artifact["path"])
+          graph_bytes = artifact_path.read_bytes()
+          graph = json.loads(graph_bytes)
+          expected = attestation["artifact"]["sha256"]
+          actual = hashlib.sha256(graph_bytes).hexdigest()
+          assert actual == expected, f"attested graph hash {expected} != {actual}"
+          nodes = graph["nodes"]
+          invariants = attestation["invariants"]
+          assert len(nodes) == invariants["nodes"]
+          assert sum(len(node["depends_on"]) for node in nodes.values()) == invariants["edges"]
+          statuses = {status: 0 for status in ("in-mathlib", "partial", "missing")}
+          for node in nodes.values():
+              statuses[node["mathlib_status"]] += 1
+          assert statuses == invariants["mathlib_status_counts"]
+          print(f"PASS  Phase 1 attestation matches {artifact_path} at {actual}")
+          PY
+
+      - name: Install and configure Lean, and get mathlib cache
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          use-github-cache: false
+          use-mathlib-cache: true
+
+      - name: "Check that LearningTheoryFromFirstPrinciples.lean is up to date"
+        run: ~/.elan/bin/lake exe mk_all --check
+
+      - name: Cache build artifacts
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: .lake/build
+          key: LakeBuild-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', '**/*.lean') }}
+          restore-keys: LakeBuild-
+
+      - name: Build project
+        run: ~/.elan/bin/lake build LearningTheoryFromFirstPrinciples
+
+      - name: Audit Lean trust boundary
+        run: |
+          python3 scripts/check_lean_hygiene.py --self-test
+          python3 scripts/check_lean_hygiene.py

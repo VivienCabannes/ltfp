@@ -1,0 +1,4596 @@
+{
+  "schema_version": 2,
+  "sources": {
+    "book": {
+      "id": "ltfp-book-2025-05-26",
+      "title": "Learning Theory from First Principles",
+      "date": "2025-05-26",
+      "local_file": "sources/ltfp_book.pdf",
+      "format": "pdf",
+      "sha256": "5e7840c545d24aaf21a1ea5fbddd76e78153de0a9a952f56810a8618a9fc9e06"
+    },
+    "supplement": {
+      "id": "ltfp-exercises-2025-12-01",
+      "title": "Learning Theory from First Principles - Exercises",
+      "date": "2025-12-01",
+      "local_file": "sources/ltfp_exercises.pdf",
+      "format": "pdf",
+      "sha256": "b68b440586765f123ae02cc9d8ac17b057cb01266db5358d92786ba0a1b3ab3d"
+    }
+  },
+  "chapters": {
+    "1": {
+      "exercise_range": [
+        "1.1",
+        "1.29"
+      ],
+      "count": 29,
+      "book_printed_pages": [
+        6,
+        20
+      ],
+      "supplement_printed_pages": [
+        1,
+        4
+      ]
+    },
+    "2": {
+      "exercise_range": [
+        "2.1",
+        "2.8"
+      ],
+      "count": 8,
+      "book_printed_pages": [
+        30,
+        32
+      ],
+      "supplement_printed_pages": [
+        5,
+        8
+      ]
+    },
+    "3": {
+      "exercise_range": [
+        "3.1",
+        "3.10"
+      ],
+      "count": 10,
+      "book_printed_pages": [
+        51,
+        67
+      ],
+      "supplement_printed_pages": [
+        9,
+        12
+      ]
+    },
+    "4": {
+      "exercise_range": [
+        "4.1",
+        "4.16"
+      ],
+      "count": 16,
+      "book_printed_pages": [
+        81,
+        102
+      ],
+      "supplement_printed_pages": [
+        13,
+        17
+      ]
+    },
+    "5": {
+      "exercise_range": [
+        "5.1",
+        "5.36"
+      ],
+      "count": 36,
+      "book_printed_pages": [
+        115,
+        152
+      ],
+      "supplement_printed_pages": [
+        19,
+        25
+      ]
+    },
+    "6": {
+      "exercise_range": [
+        "6.1",
+        "6.6"
+      ],
+      "count": 6,
+      "book_printed_pages": [
+        161,
+        178
+      ],
+      "supplement_printed_pages": [
+        27,
+        28
+      ]
+    },
+    "7": {
+      "exercise_range": [
+        "7.1",
+        "7.23"
+      ],
+      "count": 23,
+      "book_printed_pages": [
+        185,
+        209
+      ],
+      "supplement_printed_pages": [
+        29,
+        35
+      ]
+    },
+    "8": {
+      "exercise_range": [
+        "8.1",
+        "8.17"
+      ],
+      "count": 17,
+      "book_printed_pages": [
+        225,
+        245
+      ],
+      "supplement_printed_pages": [
+        37,
+        39
+      ]
+    },
+    "9": {
+      "exercise_range": [
+        "9.1",
+        "9.10"
+      ],
+      "count": 10,
+      "book_printed_pages": [
+        255,
+        275
+      ],
+      "supplement_printed_pages": [
+        41,
+        42
+      ]
+    },
+    "10": {
+      "exercise_range": [
+        "10.1",
+        "10.9"
+      ],
+      "count": 9,
+      "book_printed_pages": [
+        286,
+        308
+      ],
+      "supplement_printed_pages": null
+    },
+    "11": {
+      "exercise_range": [
+        "11.1",
+        "11.8"
+      ],
+      "count": 8,
+      "book_printed_pages": [
+        318,
+        334
+      ],
+      "supplement_printed_pages": null
+    },
+    "12": {
+      "exercise_range": [
+        "12.1",
+        "12.9"
+      ],
+      "count": 9,
+      "book_printed_pages": [
+        351,
+        375
+      ],
+      "supplement_printed_pages": null
+    },
+    "13": {
+      "exercise_range": [
+        "13.1",
+        "13.10"
+      ],
+      "count": 10,
+      "book_printed_pages": [
+        382,
+        403
+      ],
+      "supplement_printed_pages": null
+    },
+    "14": {
+      "exercise_range": [
+        "14.1",
+        "14.13"
+      ],
+      "count": 13,
+      "book_printed_pages": [
+        411,
+        418
+      ],
+      "supplement_printed_pages": null
+    },
+    "15": {
+      "exercise_range": [
+        "15.1",
+        "15.5"
+      ],
+      "count": 5,
+      "book_printed_pages": [
+        437,
+        449
+      ],
+      "supplement_printed_pages": null
+    }
+  },
+  "exercises": {
+    "1.1": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "members": [
+        "Rank-one all-ones inverse (Exercise 1.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.2": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "members": [
+        "Block LDU diagonalization (Exercise 1.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.3": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "members": [
+        "Schur determinant factorization (Exercise 1.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.4": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "members": [
+        "Gaussian conditioning derivation (Exercise 1.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.5": {
+      "owner": "Spectral and differential matrix tools",
+      "members": [
+        "Gram eigenvectors (Exercise 1.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.6": {
+      "owner": "Spectral and differential matrix tools",
+      "members": [
+        "Dilation eigenvectors (Exercise 1.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.7": {
+      "owner": "Spectral and differential matrix tools",
+      "members": [
+        "Logistic gradient and Hessian (Exercise 1.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.8": {
+      "owner": "Spectral and differential matrix tools",
+      "members": [
+        "Inverse-trace and log-determinant gradients (Exercise 1.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.9": {
+      "owner": "Elementary probability and convexity bounds",
+      "members": [
+        "Markov inequality (Exercise 1.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.10": {
+      "owner": "Elementary probability and convexity bounds",
+      "members": [
+        "Chernoff bound (Exercise 1.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.11": {
+      "owner": "Elementary probability and convexity bounds",
+      "members": [
+        "Tail-integral expectation identity (Exercise 1.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.12": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Gaussian tail sandwich (Exercise 1.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.13": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "One-sided confidence bound (Exercise 1.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.14": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Azuma inequality (Exercise 1.14)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.15": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Gaussian sub-Gaussianity (Exercise 1.15)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.16": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Concentration of sub-Gaussian averages (Exercise 1.16)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.17": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Even-moment bound (Exercise 1.17)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.18": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Moment-bound converse (Exercise 1.18)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.19": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "members": [
+        "Negative-Laplace bound for nonnegative variables (Exercise 1.19)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.20": {
+      "owner": "Bounded differences and Bernstein concentration",
+      "members": [
+        "Vector Hoeffding bound (Exercise 1.20)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.21": {
+      "owner": "Bounded differences and Bernstein concentration",
+      "members": [
+        "Proof of noncentered Bernstein (Exercise 1.21)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.22": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "members": [
+        "Expected absolute maximum (Exercise 1.22)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.23": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "members": [
+        "Gaussian maximum lower bound (Exercise 1.23)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.24": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "members": [
+        "Weighted simultaneous confidence and penalized-selection bound (Exercise 1.24)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.25": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "members": [
+        "Smooth convex independent-sum bound (Exercise 1.25)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.26": {
+      "owner": "Deterministic quadrature error",
+      "members": [
+        "Affine interpolation and local error (Exercise 1.26)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.27": {
+      "owner": "Deterministic quadrature error",
+      "members": [
+        "First-derivative error rate (Exercise 1.27)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.28": {
+      "owner": "Deterministic quadrature error",
+      "members": [
+        "Periodic smooth-function error rate (Exercise 1.28)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "1.29": {
+      "owner": "Matrix and operator concentration",
+      "members": [
+        "Rectangular matrix Hoeffding and Bernstein (Exercise 1.29)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.1": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Cost-sensitive Bayes classifier (Exercise 2.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.2": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Absolute-loss Bayes predictor (Exercise 2.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.3": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Pinball-loss quantile predictor (Exercise 2.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.4": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Epsilon-insensitive Bayes predictors (Exercise 2.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.5": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Inverted-classifier risk (Exercise 2.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.6": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Chance-prediction risk (Exercise 2.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.7": {
+      "owner": "Loss risk and Bayes decision theory",
+      "members": [
+        "Posterior-sampling optimality (Exercise 2.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "2.8": {
+      "owner": "Learning rules, capacity, and risk decomposition",
+      "members": [
+        "Nearest-neighbor sample-size behavior (Exercise 2.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.1": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "members": [
+        "Noise-variance maximum likelihood estimator (Exercise 3.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.2": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "members": [
+        "Expected training risk and unbiased noise estimator (Exercise 3.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.3": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "members": [
+        "General-noise covariance risk (Exercise 3.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.4": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "members": [
+        "Multivariate ordinary least-squares risk (Exercise 3.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.5": {
+      "owner": "Ridge regression and dimension-free control",
+      "members": [
+        "Primal-dual Woodbury form (Exercise 3.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.6": {
+      "owner": "Ridge regression and dimension-free control",
+      "members": [
+        "Generalized quadratic-penalty risk (Exercise 3.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.7": {
+      "owner": "Ridge regression and dimension-free control",
+      "members": [
+        "Leave-one-out hat-matrix identity (Exercise 3.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.8": {
+      "owner": "Random-design least-squares and covariance concentration",
+      "members": [
+        "Random-design ridge risk (Exercise 3.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.9": {
+      "owner": "Principal components and low-rank regression",
+      "members": [
+        "Alternating matrix-factorization convergence (Exercise 3.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "3.10": {
+      "owner": "Principal components and low-rank regression",
+      "members": [
+        "K-means alternating updates (Exercise 3.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.1": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "members": [
+        "Fenchel-conjugate calibration exercise (Exercise 4.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.2": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "members": [
+        "General convex calibration transform exercise (Exercise 4.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.3": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "members": [
+        "Low-noise linear calibration exercise (Exercise 4.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.4": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "members": [
+        "Logistic Gaussian discriminant exercise (Exercise 4.4)",
+        "Multicategory discriminant extension exercise (Exercise 4.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.5": {
+      "owner": "Empirical-risk decomposition and approximation",
+      "members": [
+        "Arbitrary-norm approximation exercise (Exercise 4.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.6": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "members": [
+        "Explicit quadratic uniform-deviation exercise (Exercise 4.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.7": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "members": [
+        "Expected finite-class maximum exercise (Exercise 4.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.8": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "members": [
+        "Arbitrary-norm ball covering-number exercise (Exercise 4.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.9": {
+      "owner": "Rademacher symmetrization and contraction",
+      "members": [
+        "Rademacher monotonicity exercise (Exercise 4.9)",
+        "Rademacher Minkowski-sum exercise (Exercise 4.9)",
+        "Rademacher homogeneity exercise (Exercise 4.9)",
+        "Translation invariance exercise (Exercise 4.9)",
+        "Convex-hull invariance exercise (Exercise 4.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.10": {
+      "owner": "Rademacher symmetrization and contraction",
+      "members": [
+        "Massart finite-class lemma exercise (Exercise 4.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.11": {
+      "owner": "Rademacher symmetrization and contraction",
+      "members": [
+        "Gaussian-Rademacher comparison exercise (Exercise 4.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.12": {
+      "owner": "Linear and regularized predictor generalization",
+      "members": [
+        "l1 linear-class complexity exercise (Exercise 4.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.13": {
+      "owner": "Linear and regularized predictor generalization",
+      "members": [
+        "lp linear-class complexity exercise (Exercise 4.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.14": {
+      "owner": "Linear and regularized predictor generalization",
+      "members": [
+        "l1 constrained empirical-risk-minimization exercise (Exercise 4.14)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.15": {
+      "owner": "Linear and regularized predictor generalization",
+      "members": [
+        "Strongly convex regularizer extension exercise (Exercise 4.15)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "4.16": {
+      "owner": "Linear and regularized predictor generalization",
+      "members": [
+        "Stability generalization exercise (Exercise 4.16)",
+        "Regularized empirical-risk-minimization stability exercise (Exercise 4.16)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.1": {
+      "owner": "Gradient descent on quadratic objectives",
+      "members": [
+        "Smallest-positive-eigenvalue convergence exercise (Exercise 5.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.2": {
+      "owner": "Gradient descent on quadratic objectives",
+      "members": [
+        "Exact-line-search and Kantorovich exercise (Exercise 5.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.3": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Strict Jensen equality exercise (Exercise 5.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.4": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Stationary-point identification exercise (Exercise 5.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.5": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Quadratic-shift characterization exercise (Exercise 5.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.6": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Uniqueness of strongly convex minimizer exercise (Exercise 5.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.7": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Strong gradient monotonicity exercise (Exercise 5.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.8": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Descent-direction angle exercise (Exercise 5.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.9": {
+      "owner": "Smooth convex gradient-descent rates",
+      "members": [
+        "Regularized logistic and ridge constants exercise (Exercise 5.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.10": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Smooth-conjugate strong-convexity exercise (Exercise 5.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.11": {
+      "owner": "Convex smoothness and duality foundations",
+      "members": [
+        "Fenchel-Young inequality exercise (Exercise 5.11)",
+        "Fenchel-Young residual bound exercise (Exercise 5.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.12": {
+      "owner": "Smooth convex gradient-descent rates",
+      "members": [
+        "Alternative smooth-descent proof exercise (Exercise 5.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.13": {
+      "owner": "Smooth convex gradient-descent rates",
+      "members": [
+        "Reciprocal-gap smooth-descent proof exercise (Exercise 5.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.14": {
+      "owner": "Nesterov acceleration and momentum methods",
+      "members": [
+        "Strongly convex acceleration Lyapunov exercise (Exercise 5.14)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.15": {
+      "owner": "Nesterov acceleration and momentum methods",
+      "members": [
+        "Convex acceleration Lyapunov exercise (Exercise 5.15)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.16": {
+      "owner": "Newton and preconditioned gradient methods",
+      "members": [
+        "Newton Hessian-Lipschitz exercise (Exercise 5.16)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.17": {
+      "owner": "Proximal, projected, and composite gradient methods",
+      "members": [
+        "Proximal-gradient convergence exercise (Exercise 5.17)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.18": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Bounded-gradient equivalence exercise (Exercise 5.18)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.19": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Absolute-value and hinge subdifferentials exercise (Exercise 5.19)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.20": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Normalized subgradient exercise (Exercise 5.20)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.21": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Projection contractivity exercise (Exercise 5.21)",
+        "Projected subgradient convergence exercise (Exercise 5.21)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.22": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Bregman divergence (Exercise 5.22)",
+        "Mirror-descent update exercise (Exercise 5.22)",
+        "Entropy mirror map and multiplicative update exercise (Exercise 5.22)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.23": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Averaged projected-subgradient exercise (Exercise 5.23)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.24": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Doubling-trick exercise (Exercise 5.24)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.25": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "members": [
+        "Logistic and support-vector constants exercise (Exercise 5.25)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.26": {
+      "owner": "Stochastic gradient descent and generalization",
+      "members": [
+        "Projected high-probability stochastic-gradient exercise (Exercise 5.26)",
+        "Martingale-difference stochastic-gradient analysis exercise (Exercise 5.26)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.27": {
+      "owner": "Stochastic gradient descent and generalization",
+      "members": [
+        "Minibatch stochastic-gradient exercise (Exercise 5.27)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.28": {
+      "owner": "Stochastic gradient descent and generalization",
+      "members": [
+        "Smooth stochastic-gradient exercise (Exercise 5.28)",
+        "Smooth minibatch improvement exercise (Exercise 5.28)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.29": {
+      "owner": "Stochastic gradient descent and generalization",
+      "members": [
+        "Nonuniform importance-sampling exercise (Exercise 5.29)",
+        "Support-vector importance-sampling specialization exercise (Exercise 5.29)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.30": {
+      "owner": "Stochastic gradient descent and generalization",
+      "members": [
+        "Nonconvex stochastic small-gradient exercise (Exercise 5.30)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.31": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "members": [
+        "Noisy quadratic constant-step exercise (Exercise 5.31)",
+        "Averaged noisy quadratic exercise (Exercise 5.31)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.32": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "members": [
+        "Log-free weighted strongly convex exercise (Exercise 5.32)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.33": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "members": [
+        "Sample-mean recursion exercise (Exercise 5.33)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.34": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "members": [
+        "Blended-step-size strongly convex exercise (Exercise 5.34)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.35": {
+      "owner": "Least-squares stochastic-gradient bias and variance",
+      "members": [
+        "Weaker regression-noise assumption exercise (Exercise 5.35)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "5.36": {
+      "owner": "Finite-sum variance reduction and first-order complexity",
+      "members": [
+        "Dimensional-homogeneity exercise (Exercise 5.36)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.1": {
+      "owner": "Local-averaging estimator constructions",
+      "members": [
+        "Smoothing-matrix sparsity exercise (Exercise 6.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.2": {
+      "owner": "Generic local-smoother bias and variance",
+      "members": [
+        "Classification majority-vote calibration exercise (Exercise 6.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.3": {
+      "owner": "Nearest-neighbor geometry and convergence",
+      "members": [
+        "Noiseless one-nearest-neighbor consistency exercise (Exercise 6.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.4": {
+      "owner": "Kernel-regression convergence",
+      "members": [
+        "Bounded-normalization-constant exercise (Exercise 6.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.5": {
+      "owner": "Universal consistency of local averaging",
+      "members": [
+        "Reciprocal Bernoulli-sum exercise (Exercise 6.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "6.6": {
+      "owner": "Higher-order local-polynomial adaptivity",
+      "members": [
+        "Second-order Nadaraya-Watson bias exercise (Exercise 6.6)",
+        "Optimal twice-smooth bandwidth exercise (Exercise 6.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.1": {
+      "owner": "RKHS foundations and representer principles",
+      "members": [
+        "Bounded evaluations characterize RKHSs (Exercise 7.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.2": {
+      "owner": "RKHS foundations and representer principles",
+      "members": [
+        "Exponentials of kernels (Exercise 7.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.3": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "members": [
+        "Inhomogeneous polynomial feature space (Exercise 7.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.4": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "members": [
+        "Order-two Bernoulli kernel (Exercise 7.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.5": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "members": [
+        "Periodic exponential closed form (Exercise 7.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.6": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "members": [
+        "Mercer-kernel construction (Exercise 7.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.7": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "members": [
+        "Mercer decomposition (Exercise 7.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.8": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "members": [
+        "Column sampling as optimal feature projection (Exercise 7.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.9": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "members": [
+        "Positive-semidefinite Nystrom residual (Exercise 7.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.10": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "members": [
+        "Random features for Mercer kernels (Exercise 7.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.11": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Ridge duality and conditioning (Exercise 7.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.12": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Logistic and hinge duals (Exercise 7.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.13": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Unregularized constant term (Exercise 7.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.14": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Infinite-bandwidth Gaussian limit (Exercise 7.14)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.15": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Kernel optimization (Exercise 7.15)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.16": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "members": [
+        "Unregularized stochastic-gradient bound (Exercise 7.16)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.17": {
+      "owner": "Kernelized linear algorithms and applications",
+      "members": [
+        "Kernel principal components (Exercise 7.17)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.18": {
+      "owner": "Kernelized linear algorithms and applications",
+      "members": [
+        "Kernel K-means (Exercise 7.18)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.19": {
+      "owner": "Kernelized linear algorithms and applications",
+      "members": [
+        "Kernel quadrature (Exercise 7.19)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.20": {
+      "owner": "Kernelized linear algorithms and applications",
+      "members": [
+        "Kernel nearest-centroid classification (Exercise 7.20)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.21": {
+      "owner": "Lipschitz kernel learning and smoothness adaptation",
+      "members": [
+        "Gaussian-kernel approximation error (Exercise 7.21)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.22": {
+      "owner": "Kernel ridge covariance theory",
+      "members": [
+        "Centered kernel ridge (Exercise 7.22)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "7.23": {
+      "owner": "Kernel ridge covariance theory",
+      "members": [
+        "Periodic-kernel smoothing eigenvalues (Exercise 7.23)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.1": {
+      "owner": "Sparse least-squares proof and probability toolkit",
+      "members": [
+        "Chi-squared concentration (Exercise 8.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.2": {
+      "owner": "Combinatorial sparse model selection",
+      "members": [
+        "Approximate constrained minimization (Exercise 8.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.3": {
+      "owner": "Combinatorial sparse model selection",
+      "members": [
+        "Sparse Lipschitz model selection (Exercise 8.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.4": {
+      "owner": "Combinatorial sparse model selection",
+      "members": [
+        "Cardinality-dependent penalty (Exercise 8.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.5": {
+      "owner": "Lasso geometry and optimization",
+      "members": [
+        "Coordinate update (Exercise 8.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.6": {
+      "owner": "Lasso geometry and optimization",
+      "members": [
+        "Zero Lasso solution (Exercise 8.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.7": {
+      "owner": "Slow Lasso rates",
+      "members": [
+        "Duality of lp norms (Exercise 8.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.8": {
+      "owner": "Slow Lasso rates",
+      "members": [
+        "Expected slow Lasso rate (Exercise 8.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.9": {
+      "owner": "Fast Lasso rates and design conditions",
+      "members": [
+        "Expected fast rate (Exercise 8.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.10": {
+      "owner": "Fast Lasso rates and design conditions",
+      "members": [
+        "Gaussian mutual incoherence (Exercise 8.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.11": {
+      "owner": "Fast Lasso rates and design conditions",
+      "members": [
+        "Recovery of the slow rate without strong convexity (Exercise 8.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.12": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Orthogonal-design group thresholding (Exercise 8.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.13": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Nested-group support patterns (Exercise 8.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.14": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Nuclear-norm proximal problem (Exercise 8.14)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.15": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Nuclear-norm factorization (Exercise 8.15)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.16": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Multiple-kernel variational equivalence (Exercise 8.16)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "8.17": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "members": [
+        "Concave-penalty variational identity (Exercise 8.17)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.1": {
+      "owner": "Shallow ReLU models and norm-controlled estimation",
+      "members": [
+        "l1-normalized incoming weights (Exercise 9.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.2": {
+      "owner": "Shallow ReLU models and norm-controlled estimation",
+      "members": [
+        "Deep-network Rademacher recursion (Exercise 9.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.3": {
+      "owner": "Variation spaces and neural approximation",
+      "members": [
+        "Minimum-variation interpolant (Exercise 9.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.4": {
+      "owner": "Variation spaces and neural approximation",
+      "members": [
+        "Step-activation variation norm (Exercise 9.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.5": {
+      "owner": "Finite-width approximation and neural generalization",
+      "members": [
+        "Uniform averaging (Exercise 9.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.6": {
+      "owner": "Finite-width approximation and neural generalization",
+      "members": [
+        "Frank-Wolfe line search (Exercise 9.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.7": {
+      "owner": "Finite-width approximation and neural generalization",
+      "members": [
+        "Arbitrary activations (Exercise 9.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.8": {
+      "owner": "Finite-width approximation and neural generalization",
+      "members": [
+        "Additive ridge-function rate (Exercise 9.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.9": {
+      "owner": "Neural variation spaces and random-feature kernels",
+      "members": [
+        "Variation norm as kernel learning (Exercise 9.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "9.10": {
+      "owner": "Neural variation spaces and random-feature kernels",
+      "members": [
+        "Step-activation kernel (Exercise 9.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": true
+      }
+    },
+    "10.1": {
+      "owner": "Averaging and bagging of predictors",
+      "members": [
+        "Distributed nearest-neighbor rate (Exercise 10.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.2": {
+      "owner": "Averaging and bagging of predictors",
+      "members": [
+        "Replicated ridge-regression rate (Exercise 10.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.3": {
+      "owner": "Averaging and bagging of predictors",
+      "members": [
+        "Independent majority-vote error bound (Exercise 10.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.4": {
+      "owner": "Averaging and bagging of predictors",
+      "members": [
+        "Bootstrap and subsampling bagging (Exercise 10.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.5": {
+      "owner": "Randomized least-squares compression and embeddings",
+      "members": [
+        "Coordinate-sampling sketch moments (Exercise 10.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.6": {
+      "owner": "Atomic geometry and classical boosting",
+      "members": [
+        "Weak-learner oracle (Exercise 10.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.7": {
+      "owner": "Atomic geometry and classical boosting",
+      "members": [
+        "Orthogonal matching-pursuit approximation rate (Exercise 10.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.8": {
+      "owner": "Gradient boosting convergence and early stopping",
+      "members": [
+        "Gradient-boosting convergence theorem (Exercise 10.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "10.9": {
+      "owner": "Gradient boosting convergence and early stopping",
+      "members": [
+        "Rademacher complexity of variation balls (Exercise 10.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.1": {
+      "owner": "Online convex regret with projected gradients",
+      "members": [
+        "Convex online-regret theorem (Exercise 11.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.2": {
+      "owner": "Mirror descent geometry",
+      "members": [
+        "Stochastic mirror descent for l1 regularization (Exercise 11.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.3": {
+      "owner": "Online minimax regret lower bounds",
+      "members": [
+        "Weighted-regret upper and lower bounds (Exercise 11.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.4": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "members": [
+        "Gaussian moment bounds (Exercise 11.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.5": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "members": [
+        "Gradient-estimator second moment (Exercise 11.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.6": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "members": [
+        "Smooth zeroth-order convergence (Exercise 11.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.7": {
+      "owner": "Stochastic multiarmed bandits",
+      "members": [
+        "Pure-exploitation linear-regret lower bound (Exercise 11.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "11.8": {
+      "owner": "Stochastic multiarmed bandits",
+      "members": [
+        "Gap-free explore-then-commit bound (Exercise 11.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.1": {
+      "owner": "Maximum-margin implicit bias and perceptron dynamics",
+      "members": [
+        "Stochastic hinge optimization (Exercise 12.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.2": {
+      "owner": "Maximum-margin implicit bias and perceptron dynamics",
+      "members": [
+        "Perceptron mistake bound (Exercise 12.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.3": {
+      "owner": "Bregman and multiplicative implicit bias",
+      "members": [
+        "Bregman Pythagorean identity (Exercise 12.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.4": {
+      "owner": "Bregman and multiplicative implicit bias",
+      "members": [
+        "Discrete mirror-descent implicit bias (Exercise 12.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.5": {
+      "owner": "Gaussian linear double descent",
+      "members": [
+        "Overparameterized risk minimizer (Exercise 12.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.6": {
+      "owner": "Weak convergence and Wasserstein gradient flows",
+      "members": [
+        "Empirical-measure convergence (Exercise 12.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.7": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "members": [
+        "Rank preservation (Exercise 12.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.8": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "members": [
+        "Local minima are global (Exercise 12.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "12.9": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "members": [
+        "Matrix-sensing mirror flow (Exercise 12.9)",
+        "Nuclear-norm implicit bias (Exercise 12.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.1": {
+      "owner": "Multicategory convex surrogates",
+      "members": [
+        "Majority-class Fisher consistency of the multicategory hinge (Exercise 13.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.2": {
+      "owner": "Multicategory convex surrogates",
+      "members": [
+        "One-versus-all surrogate analysis (Exercise 13.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.3": {
+      "owner": "Multicategory convex surrogates",
+      "members": [
+        "Pairwise surrogate analysis (Exercise 13.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.4": {
+      "owner": "Vector-valued learning bounds",
+      "members": [
+        "Mirror descent with trace-norm penalty (Exercise 13.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.5": {
+      "owner": "Vector-valued learning bounds",
+      "members": [
+        "Neural multicategory bound (Exercise 13.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.6": {
+      "owner": "Smooth structured surrogates",
+      "members": [
+        "Softmax calibration function (Exercise 13.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.7": {
+      "owner": "Smooth structured surrogates",
+      "members": [
+        "Reduction to binary calibration problems (Exercise 13.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.8": {
+      "owner": "Nonsmooth structured surrogates",
+      "members": [
+        "Binary max-min specialization (Exercise 13.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.9": {
+      "owner": "Nonsmooth structured surrogates",
+      "members": [
+        "Multicategory max-min formulation (Exercise 13.9)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "13.10": {
+      "owner": "Structured surrogate generalization",
+      "members": [
+        "Alternative smooth surrogate bound (Exercise 13.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.1": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "members": [
+        "Gaussian negative log-density (Exercise 14.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.2": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "members": [
+        "Laplace variance (Exercise 14.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.3": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "members": [
+        "Gaussian-inverse-Gamma mixture gives a Student prior (Exercise 14.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.4": {
+      "owner": "Hierarchical sparse priors",
+      "members": [
+        "Scale mixtures are super-Gaussian (Exercise 14.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.5": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Posterior covariance differential identity (Exercise 14.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.6": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Poisson and geometric posterior-mean identities (Exercise 14.6)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.7": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "MMSE as MAP for a transformed prior (Exercise 14.7)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.8": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Spike-and-slab posterior estimator (Exercise 14.8)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.9": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Laplace-prior posterior estimator (Exercise 14.9)",
+        "Marginal-density calculations (Exercises 14.9 and 14.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.10": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Gaussian covariance MMSE and MAP (Exercise 14.10)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.11": {
+      "owner": "Posterior mean and posterior mode",
+      "members": [
+        "Marginal-density calculations (Exercises 14.9 and 14.11)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.12": {
+      "owner": "Generative classification models",
+      "members": [
+        "Maximum-likelihood LDA parameters (Exercise 14.12)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "14.13": {
+      "owner": "Generative classification models",
+      "members": [
+        "Quadratic discriminant analysis (Exercise 14.13)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "15.1": {
+      "owner": "Regression minimax lower bounds",
+      "members": [
+        "Euclidean-ball packing lower bound (Exercise 15.1)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "15.2": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "members": [
+        "First-order-oracle extension for differentiable Lipschitz objectives (Exercise 15.2)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "15.3": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "members": [
+        "Random-query covering lower bound (Exercise 15.3)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "15.4": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "members": [
+        "Gradient-Lipschitz zeroth-order lower bound (Exercise 15.4)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    },
+    "15.5": {
+      "owner": "Stochastic first-order lower bounds",
+      "members": [
+        "Quadratic stochastic-gradient lower bound (Exercise 15.5)"
+      ],
+      "present_in": {
+        "book": true,
+        "supplement": false
+      }
+    }
+  },
+  "phase1_graph": {
+    "file": "sources/phase1_graph.json",
+    "sha256": "cbf4e871f971fd9c590219073389a41e9977dcbe11ebf2111fca1fd6eadd2758"
+  },
+  "fine_obligations": {
+    "Rank-one all-ones inverse (Exercise 1.1)": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "exercise_ids": [
+        "1.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Block LDU diagonalization (Exercise 1.2)": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "exercise_ids": [
+        "1.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Schur determinant factorization (Exercise 1.3)": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "exercise_ids": [
+        "1.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian conditioning derivation (Exercise 1.4)": {
+      "owner": "Matrix algebra and Gaussian conditioning",
+      "exercise_ids": [
+        "1.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gram eigenvectors (Exercise 1.5)": {
+      "owner": "Spectral and differential matrix tools",
+      "exercise_ids": [
+        "1.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Dilation eigenvectors (Exercise 1.6)": {
+      "owner": "Spectral and differential matrix tools",
+      "exercise_ids": [
+        "1.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Logistic gradient and Hessian (Exercise 1.7)": {
+      "owner": "Spectral and differential matrix tools",
+      "exercise_ids": [
+        "1.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Inverse-trace and log-determinant gradients (Exercise 1.8)": {
+      "owner": "Spectral and differential matrix tools",
+      "exercise_ids": [
+        "1.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Markov inequality (Exercise 1.9)": {
+      "owner": "Elementary probability and convexity bounds",
+      "exercise_ids": [
+        "1.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Chernoff bound (Exercise 1.10)": {
+      "owner": "Elementary probability and convexity bounds",
+      "exercise_ids": [
+        "1.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Tail-integral expectation identity (Exercise 1.11)": {
+      "owner": "Elementary probability and convexity bounds",
+      "exercise_ids": [
+        "1.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian tail sandwich (Exercise 1.12)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "One-sided confidence bound (Exercise 1.13)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Azuma inequality (Exercise 1.14)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.14"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian sub-Gaussianity (Exercise 1.15)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.15"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Concentration of sub-Gaussian averages (Exercise 1.16)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Even-moment bound (Exercise 1.17)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.17"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Moment-bound converse (Exercise 1.18)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.18"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Negative-Laplace bound for nonnegative variables (Exercise 1.19)": {
+      "owner": "Hoeffding and sub-Gaussian concentration",
+      "exercise_ids": [
+        "1.19"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Vector Hoeffding bound (Exercise 1.20)": {
+      "owner": "Bounded differences and Bernstein concentration",
+      "exercise_ids": [
+        "1.20"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Proof of noncentered Bernstein (Exercise 1.21)": {
+      "owner": "Bounded differences and Bernstein concentration",
+      "exercise_ids": [
+        "1.21"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Expected absolute maximum (Exercise 1.22)": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "exercise_ids": [
+        "1.22"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian maximum lower bound (Exercise 1.23)": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "exercise_ids": [
+        "1.23"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Weighted simultaneous confidence and penalized-selection bound (Exercise 1.24)": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "exercise_ids": [
+        "1.24"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smooth convex independent-sum bound (Exercise 1.25)": {
+      "owner": "Maxima and smooth-sum expectation bounds",
+      "exercise_ids": [
+        "1.25"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Affine interpolation and local error (Exercise 1.26)": {
+      "owner": "Deterministic quadrature error",
+      "exercise_ids": [
+        "1.26"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "First-derivative error rate (Exercise 1.27)": {
+      "owner": "Deterministic quadrature error",
+      "exercise_ids": [
+        "1.27"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Periodic smooth-function error rate (Exercise 1.28)": {
+      "owner": "Deterministic quadrature error",
+      "exercise_ids": [
+        "1.28"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rectangular matrix Hoeffding and Bernstein (Exercise 1.29)": {
+      "owner": "Matrix and operator concentration",
+      "exercise_ids": [
+        "1.29"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Cost-sensitive Bayes classifier (Exercise 2.1)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Absolute-loss Bayes predictor (Exercise 2.2)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Pinball-loss quantile predictor (Exercise 2.3)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Epsilon-insensitive Bayes predictors (Exercise 2.4)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Inverted-classifier risk (Exercise 2.5)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Chance-prediction risk (Exercise 2.6)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Posterior-sampling optimality (Exercise 2.7)": {
+      "owner": "Loss risk and Bayes decision theory",
+      "exercise_ids": [
+        "2.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nearest-neighbor sample-size behavior (Exercise 2.8)": {
+      "owner": "Learning rules, capacity, and risk decomposition",
+      "exercise_ids": [
+        "2.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Noise-variance maximum likelihood estimator (Exercise 3.1)": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "exercise_ids": [
+        "3.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Expected training risk and unbiased noise estimator (Exercise 3.2)": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "exercise_ids": [
+        "3.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "General-noise covariance risk (Exercise 3.3)": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "exercise_ids": [
+        "3.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Multivariate ordinary least-squares risk (Exercise 3.4)": {
+      "owner": "Fixed-design ordinary least-squares statistics",
+      "exercise_ids": [
+        "3.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Primal-dual Woodbury form (Exercise 3.5)": {
+      "owner": "Ridge regression and dimension-free control",
+      "exercise_ids": [
+        "3.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Generalized quadratic-penalty risk (Exercise 3.6)": {
+      "owner": "Ridge regression and dimension-free control",
+      "exercise_ids": [
+        "3.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Leave-one-out hat-matrix identity (Exercise 3.7)": {
+      "owner": "Ridge regression and dimension-free control",
+      "exercise_ids": [
+        "3.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Random-design ridge risk (Exercise 3.8)": {
+      "owner": "Random-design least-squares and covariance concentration",
+      "exercise_ids": [
+        "3.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Alternating matrix-factorization convergence (Exercise 3.9)": {
+      "owner": "Principal components and low-rank regression",
+      "exercise_ids": [
+        "3.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "K-means alternating updates (Exercise 3.10)": {
+      "owner": "Principal components and low-rank regression",
+      "exercise_ids": [
+        "3.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Fenchel-conjugate calibration exercise (Exercise 4.1)": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "exercise_ids": [
+        "4.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "General convex calibration transform exercise (Exercise 4.2)": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "exercise_ids": [
+        "4.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Low-noise linear calibration exercise (Exercise 4.3)": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "exercise_ids": [
+        "4.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Logistic Gaussian discriminant exercise (Exercise 4.4)": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "exercise_ids": [
+        "4.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Multicategory discriminant extension exercise (Exercise 4.4)": {
+      "owner": "Classification calibration and surrogate-risk transfer",
+      "exercise_ids": [
+        "4.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Arbitrary-norm approximation exercise (Exercise 4.5)": {
+      "owner": "Empirical-risk decomposition and approximation",
+      "exercise_ids": [
+        "4.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Explicit quadratic uniform-deviation exercise (Exercise 4.6)": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "exercise_ids": [
+        "4.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Expected finite-class maximum exercise (Exercise 4.7)": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "exercise_ids": [
+        "4.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Arbitrary-norm ball covering-number exercise (Exercise 4.8)": {
+      "owner": "Uniform deviations, finite classes, and coverings",
+      "exercise_ids": [
+        "4.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rademacher monotonicity exercise (Exercise 4.9)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rademacher Minkowski-sum exercise (Exercise 4.9)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rademacher homogeneity exercise (Exercise 4.9)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Translation invariance exercise (Exercise 4.9)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Convex-hull invariance exercise (Exercise 4.9)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Massart finite-class lemma exercise (Exercise 4.10)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian-Rademacher comparison exercise (Exercise 4.11)": {
+      "owner": "Rademacher symmetrization and contraction",
+      "exercise_ids": [
+        "4.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "l1 linear-class complexity exercise (Exercise 4.12)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "lp linear-class complexity exercise (Exercise 4.13)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "l1 constrained empirical-risk-minimization exercise (Exercise 4.14)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.14"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Strongly convex regularizer extension exercise (Exercise 4.15)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.15"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Stability generalization exercise (Exercise 4.16)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Regularized empirical-risk-minimization stability exercise (Exercise 4.16)": {
+      "owner": "Linear and regularized predictor generalization",
+      "exercise_ids": [
+        "4.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smallest-positive-eigenvalue convergence exercise (Exercise 5.1)": {
+      "owner": "Gradient descent on quadratic objectives",
+      "exercise_ids": [
+        "5.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Exact-line-search and Kantorovich exercise (Exercise 5.2)": {
+      "owner": "Gradient descent on quadratic objectives",
+      "exercise_ids": [
+        "5.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Strict Jensen equality exercise (Exercise 5.3)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Stationary-point identification exercise (Exercise 5.4)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Quadratic-shift characterization exercise (Exercise 5.5)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Uniqueness of strongly convex minimizer exercise (Exercise 5.6)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Strong gradient monotonicity exercise (Exercise 5.7)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Descent-direction angle exercise (Exercise 5.8)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Regularized logistic and ridge constants exercise (Exercise 5.9)": {
+      "owner": "Smooth convex gradient-descent rates",
+      "exercise_ids": [
+        "5.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smooth-conjugate strong-convexity exercise (Exercise 5.10)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Fenchel-Young inequality exercise (Exercise 5.11)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Fenchel-Young residual bound exercise (Exercise 5.11)": {
+      "owner": "Convex smoothness and duality foundations",
+      "exercise_ids": [
+        "5.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Alternative smooth-descent proof exercise (Exercise 5.12)": {
+      "owner": "Smooth convex gradient-descent rates",
+      "exercise_ids": [
+        "5.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Reciprocal-gap smooth-descent proof exercise (Exercise 5.13)": {
+      "owner": "Smooth convex gradient-descent rates",
+      "exercise_ids": [
+        "5.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Strongly convex acceleration Lyapunov exercise (Exercise 5.14)": {
+      "owner": "Nesterov acceleration and momentum methods",
+      "exercise_ids": [
+        "5.14"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Convex acceleration Lyapunov exercise (Exercise 5.15)": {
+      "owner": "Nesterov acceleration and momentum methods",
+      "exercise_ids": [
+        "5.15"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Newton Hessian-Lipschitz exercise (Exercise 5.16)": {
+      "owner": "Newton and preconditioned gradient methods",
+      "exercise_ids": [
+        "5.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Proximal-gradient convergence exercise (Exercise 5.17)": {
+      "owner": "Proximal, projected, and composite gradient methods",
+      "exercise_ids": [
+        "5.17"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bounded-gradient equivalence exercise (Exercise 5.18)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.18"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Absolute-value and hinge subdifferentials exercise (Exercise 5.19)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.19"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Normalized subgradient exercise (Exercise 5.20)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.20"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Projection contractivity exercise (Exercise 5.21)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.21"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Projected subgradient convergence exercise (Exercise 5.21)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.21"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bregman divergence (Exercise 5.22)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.22"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Mirror-descent update exercise (Exercise 5.22)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.22"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Entropy mirror map and multiplicative update exercise (Exercise 5.22)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.22"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Averaged projected-subgradient exercise (Exercise 5.23)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.23"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Doubling-trick exercise (Exercise 5.24)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.24"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Logistic and support-vector constants exercise (Exercise 5.25)": {
+      "owner": "Nonsmooth subgradient and mirror methods",
+      "exercise_ids": [
+        "5.25"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Projected high-probability stochastic-gradient exercise (Exercise 5.26)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.26"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Martingale-difference stochastic-gradient analysis exercise (Exercise 5.26)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.26"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Minibatch stochastic-gradient exercise (Exercise 5.27)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.27"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smooth stochastic-gradient exercise (Exercise 5.28)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.28"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smooth minibatch improvement exercise (Exercise 5.28)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.28"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nonuniform importance-sampling exercise (Exercise 5.29)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.29"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Support-vector importance-sampling specialization exercise (Exercise 5.29)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.29"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nonconvex stochastic small-gradient exercise (Exercise 5.30)": {
+      "owner": "Stochastic gradient descent and generalization",
+      "exercise_ids": [
+        "5.30"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Noisy quadratic constant-step exercise (Exercise 5.31)": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "exercise_ids": [
+        "5.31"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Averaged noisy quadratic exercise (Exercise 5.31)": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "exercise_ids": [
+        "5.31"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Log-free weighted strongly convex exercise (Exercise 5.32)": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "exercise_ids": [
+        "5.32"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Sample-mean recursion exercise (Exercise 5.33)": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "exercise_ids": [
+        "5.33"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Blended-step-size strongly convex exercise (Exercise 5.34)": {
+      "owner": "Strongly convex and adaptive stochastic gradients",
+      "exercise_ids": [
+        "5.34"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Weaker regression-noise assumption exercise (Exercise 5.35)": {
+      "owner": "Least-squares stochastic-gradient bias and variance",
+      "exercise_ids": [
+        "5.35"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Dimensional-homogeneity exercise (Exercise 5.36)": {
+      "owner": "Finite-sum variance reduction and first-order complexity",
+      "exercise_ids": [
+        "5.36"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smoothing-matrix sparsity exercise (Exercise 6.1)": {
+      "owner": "Local-averaging estimator constructions",
+      "exercise_ids": [
+        "6.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Classification majority-vote calibration exercise (Exercise 6.2)": {
+      "owner": "Generic local-smoother bias and variance",
+      "exercise_ids": [
+        "6.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Noiseless one-nearest-neighbor consistency exercise (Exercise 6.3)": {
+      "owner": "Nearest-neighbor geometry and convergence",
+      "exercise_ids": [
+        "6.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bounded-normalization-constant exercise (Exercise 6.4)": {
+      "owner": "Kernel-regression convergence",
+      "exercise_ids": [
+        "6.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Reciprocal Bernoulli-sum exercise (Exercise 6.5)": {
+      "owner": "Universal consistency of local averaging",
+      "exercise_ids": [
+        "6.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Second-order Nadaraya-Watson bias exercise (Exercise 6.6)": {
+      "owner": "Higher-order local-polynomial adaptivity",
+      "exercise_ids": [
+        "6.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Optimal twice-smooth bandwidth exercise (Exercise 6.6)": {
+      "owner": "Higher-order local-polynomial adaptivity",
+      "exercise_ids": [
+        "6.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bounded evaluations characterize RKHSs (Exercise 7.1)": {
+      "owner": "RKHS foundations and representer principles",
+      "exercise_ids": [
+        "7.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Exponentials of kernels (Exercise 7.2)": {
+      "owner": "RKHS foundations and representer principles",
+      "exercise_ids": [
+        "7.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Inhomogeneous polynomial feature space (Exercise 7.3)": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "exercise_ids": [
+        "7.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Order-two Bernoulli kernel (Exercise 7.4)": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "exercise_ids": [
+        "7.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Periodic exponential closed form (Exercise 7.5)": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "exercise_ids": [
+        "7.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Mercer-kernel construction (Exercise 7.6)": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "exercise_ids": [
+        "7.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Mercer decomposition (Exercise 7.7)": {
+      "owner": "Concrete kernels and harmonic characterizations",
+      "exercise_ids": [
+        "7.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Column sampling as optimal feature projection (Exercise 7.8)": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "exercise_ids": [
+        "7.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Positive-semidefinite Nystrom residual (Exercise 7.9)": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "exercise_ids": [
+        "7.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Random features for Mercer kernels (Exercise 7.10)": {
+      "owner": "Nystrom and random-feature kernel approximations",
+      "exercise_ids": [
+        "7.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Ridge duality and conditioning (Exercise 7.11)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Logistic and hinge duals (Exercise 7.12)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Unregularized constant term (Exercise 7.13)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Infinite-bandwidth Gaussian limit (Exercise 7.14)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.14"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Kernel optimization (Exercise 7.15)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.15"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Unregularized stochastic-gradient bound (Exercise 7.16)": {
+      "owner": "Finite kernel optimization and stochastic algorithms",
+      "exercise_ids": [
+        "7.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Kernel principal components (Exercise 7.17)": {
+      "owner": "Kernelized linear algorithms and applications",
+      "exercise_ids": [
+        "7.17"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Kernel K-means (Exercise 7.18)": {
+      "owner": "Kernelized linear algorithms and applications",
+      "exercise_ids": [
+        "7.18"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Kernel quadrature (Exercise 7.19)": {
+      "owner": "Kernelized linear algorithms and applications",
+      "exercise_ids": [
+        "7.19"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Kernel nearest-centroid classification (Exercise 7.20)": {
+      "owner": "Kernelized linear algorithms and applications",
+      "exercise_ids": [
+        "7.20"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian-kernel approximation error (Exercise 7.21)": {
+      "owner": "Lipschitz kernel learning and smoothness adaptation",
+      "exercise_ids": [
+        "7.21"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Centered kernel ridge (Exercise 7.22)": {
+      "owner": "Kernel ridge covariance theory",
+      "exercise_ids": [
+        "7.22"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Periodic-kernel smoothing eigenvalues (Exercise 7.23)": {
+      "owner": "Kernel ridge covariance theory",
+      "exercise_ids": [
+        "7.23"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Chi-squared concentration (Exercise 8.1)": {
+      "owner": "Sparse least-squares proof and probability toolkit",
+      "exercise_ids": [
+        "8.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Approximate constrained minimization (Exercise 8.2)": {
+      "owner": "Combinatorial sparse model selection",
+      "exercise_ids": [
+        "8.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Sparse Lipschitz model selection (Exercise 8.3)": {
+      "owner": "Combinatorial sparse model selection",
+      "exercise_ids": [
+        "8.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Cardinality-dependent penalty (Exercise 8.4)": {
+      "owner": "Combinatorial sparse model selection",
+      "exercise_ids": [
+        "8.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Coordinate update (Exercise 8.5)": {
+      "owner": "Lasso geometry and optimization",
+      "exercise_ids": [
+        "8.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Zero Lasso solution (Exercise 8.6)": {
+      "owner": "Lasso geometry and optimization",
+      "exercise_ids": [
+        "8.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Duality of lp norms (Exercise 8.7)": {
+      "owner": "Slow Lasso rates",
+      "exercise_ids": [
+        "8.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Expected slow Lasso rate (Exercise 8.8)": {
+      "owner": "Slow Lasso rates",
+      "exercise_ids": [
+        "8.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Expected fast rate (Exercise 8.9)": {
+      "owner": "Fast Lasso rates and design conditions",
+      "exercise_ids": [
+        "8.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian mutual incoherence (Exercise 8.10)": {
+      "owner": "Fast Lasso rates and design conditions",
+      "exercise_ids": [
+        "8.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Recovery of the slow rate without strong convexity (Exercise 8.11)": {
+      "owner": "Fast Lasso rates and design conditions",
+      "exercise_ids": [
+        "8.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Orthogonal-design group thresholding (Exercise 8.12)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nested-group support patterns (Exercise 8.13)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nuclear-norm proximal problem (Exercise 8.14)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.14"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nuclear-norm factorization (Exercise 8.15)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.15"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Multiple-kernel variational equivalence (Exercise 8.16)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.16"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Concave-penalty variational identity (Exercise 8.17)": {
+      "owner": "Structured sparsity and low-rank regularization",
+      "exercise_ids": [
+        "8.17"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "l1-normalized incoming weights (Exercise 9.1)": {
+      "owner": "Shallow ReLU models and norm-controlled estimation",
+      "exercise_ids": [
+        "9.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Deep-network Rademacher recursion (Exercise 9.2)": {
+      "owner": "Shallow ReLU models and norm-controlled estimation",
+      "exercise_ids": [
+        "9.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Minimum-variation interpolant (Exercise 9.3)": {
+      "owner": "Variation spaces and neural approximation",
+      "exercise_ids": [
+        "9.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Step-activation variation norm (Exercise 9.4)": {
+      "owner": "Variation spaces and neural approximation",
+      "exercise_ids": [
+        "9.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Uniform averaging (Exercise 9.5)": {
+      "owner": "Finite-width approximation and neural generalization",
+      "exercise_ids": [
+        "9.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Frank-Wolfe line search (Exercise 9.6)": {
+      "owner": "Finite-width approximation and neural generalization",
+      "exercise_ids": [
+        "9.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Arbitrary activations (Exercise 9.7)": {
+      "owner": "Finite-width approximation and neural generalization",
+      "exercise_ids": [
+        "9.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Additive ridge-function rate (Exercise 9.8)": {
+      "owner": "Finite-width approximation and neural generalization",
+      "exercise_ids": [
+        "9.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Variation norm as kernel learning (Exercise 9.9)": {
+      "owner": "Neural variation spaces and random-feature kernels",
+      "exercise_ids": [
+        "9.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Step-activation kernel (Exercise 9.10)": {
+      "owner": "Neural variation spaces and random-feature kernels",
+      "exercise_ids": [
+        "9.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Distributed nearest-neighbor rate (Exercise 10.1)": {
+      "owner": "Averaging and bagging of predictors",
+      "exercise_ids": [
+        "10.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Replicated ridge-regression rate (Exercise 10.2)": {
+      "owner": "Averaging and bagging of predictors",
+      "exercise_ids": [
+        "10.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Independent majority-vote error bound (Exercise 10.3)": {
+      "owner": "Averaging and bagging of predictors",
+      "exercise_ids": [
+        "10.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bootstrap and subsampling bagging (Exercise 10.4)": {
+      "owner": "Averaging and bagging of predictors",
+      "exercise_ids": [
+        "10.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Coordinate-sampling sketch moments (Exercise 10.5)": {
+      "owner": "Randomized least-squares compression and embeddings",
+      "exercise_ids": [
+        "10.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Weak-learner oracle (Exercise 10.6)": {
+      "owner": "Atomic geometry and classical boosting",
+      "exercise_ids": [
+        "10.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Orthogonal matching-pursuit approximation rate (Exercise 10.7)": {
+      "owner": "Atomic geometry and classical boosting",
+      "exercise_ids": [
+        "10.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gradient-boosting convergence theorem (Exercise 10.8)": {
+      "owner": "Gradient boosting convergence and early stopping",
+      "exercise_ids": [
+        "10.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rademacher complexity of variation balls (Exercise 10.9)": {
+      "owner": "Gradient boosting convergence and early stopping",
+      "exercise_ids": [
+        "10.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Convex online-regret theorem (Exercise 11.1)": {
+      "owner": "Online convex regret with projected gradients",
+      "exercise_ids": [
+        "11.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Stochastic mirror descent for l1 regularization (Exercise 11.2)": {
+      "owner": "Mirror descent geometry",
+      "exercise_ids": [
+        "11.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Weighted-regret upper and lower bounds (Exercise 11.3)": {
+      "owner": "Online minimax regret lower bounds",
+      "exercise_ids": [
+        "11.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian moment bounds (Exercise 11.4)": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "exercise_ids": [
+        "11.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gradient-estimator second moment (Exercise 11.5)": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "exercise_ids": [
+        "11.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Smooth zeroth-order convergence (Exercise 11.6)": {
+      "owner": "Gaussian zeroth-order optimization and smoothing",
+      "exercise_ids": [
+        "11.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Pure-exploitation linear-regret lower bound (Exercise 11.7)": {
+      "owner": "Stochastic multiarmed bandits",
+      "exercise_ids": [
+        "11.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gap-free explore-then-commit bound (Exercise 11.8)": {
+      "owner": "Stochastic multiarmed bandits",
+      "exercise_ids": [
+        "11.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Stochastic hinge optimization (Exercise 12.1)": {
+      "owner": "Maximum-margin implicit bias and perceptron dynamics",
+      "exercise_ids": [
+        "12.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Perceptron mistake bound (Exercise 12.2)": {
+      "owner": "Maximum-margin implicit bias and perceptron dynamics",
+      "exercise_ids": [
+        "12.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Bregman Pythagorean identity (Exercise 12.3)": {
+      "owner": "Bregman and multiplicative implicit bias",
+      "exercise_ids": [
+        "12.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Discrete mirror-descent implicit bias (Exercise 12.4)": {
+      "owner": "Bregman and multiplicative implicit bias",
+      "exercise_ids": [
+        "12.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Overparameterized risk minimizer (Exercise 12.5)": {
+      "owner": "Gaussian linear double descent",
+      "exercise_ids": [
+        "12.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Empirical-measure convergence (Exercise 12.6)": {
+      "owner": "Weak convergence and Wasserstein gradient flows",
+      "exercise_ids": [
+        "12.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Rank preservation (Exercise 12.7)": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "exercise_ids": [
+        "12.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Local minima are global (Exercise 12.8)": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "exercise_ids": [
+        "12.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Matrix-sensing mirror flow (Exercise 12.9)": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "exercise_ids": [
+        "12.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Nuclear-norm implicit bias (Exercise 12.9)": {
+      "owner": "Positive-semidefinite factor flows and matrix sensing",
+      "exercise_ids": [
+        "12.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Majority-class Fisher consistency of the multicategory hinge (Exercise 13.1)": {
+      "owner": "Multicategory convex surrogates",
+      "exercise_ids": [
+        "13.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "One-versus-all surrogate analysis (Exercise 13.2)": {
+      "owner": "Multicategory convex surrogates",
+      "exercise_ids": [
+        "13.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Pairwise surrogate analysis (Exercise 13.3)": {
+      "owner": "Multicategory convex surrogates",
+      "exercise_ids": [
+        "13.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Mirror descent with trace-norm penalty (Exercise 13.4)": {
+      "owner": "Vector-valued learning bounds",
+      "exercise_ids": [
+        "13.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Neural multicategory bound (Exercise 13.5)": {
+      "owner": "Vector-valued learning bounds",
+      "exercise_ids": [
+        "13.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Softmax calibration function (Exercise 13.6)": {
+      "owner": "Smooth structured surrogates",
+      "exercise_ids": [
+        "13.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Reduction to binary calibration problems (Exercise 13.7)": {
+      "owner": "Smooth structured surrogates",
+      "exercise_ids": [
+        "13.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Binary max-min specialization (Exercise 13.8)": {
+      "owner": "Nonsmooth structured surrogates",
+      "exercise_ids": [
+        "13.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Multicategory max-min formulation (Exercise 13.9)": {
+      "owner": "Nonsmooth structured surrogates",
+      "exercise_ids": [
+        "13.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Alternative smooth surrogate bound (Exercise 13.10)": {
+      "owner": "Structured surrogate generalization",
+      "exercise_ids": [
+        "13.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian negative log-density (Exercise 14.1)": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "exercise_ids": [
+        "14.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Laplace variance (Exercise 14.2)": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "exercise_ids": [
+        "14.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian-inverse-Gamma mixture gives a Student prior (Exercise 14.3)": {
+      "owner": "Likelihood-loss and MAP-regularization correspondences",
+      "exercise_ids": [
+        "14.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Scale mixtures are super-Gaussian (Exercise 14.4)": {
+      "owner": "Hierarchical sparse priors",
+      "exercise_ids": [
+        "14.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Posterior covariance differential identity (Exercise 14.5)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Poisson and geometric posterior-mean identities (Exercise 14.6)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.6"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "MMSE as MAP for a transformed prior (Exercise 14.7)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.7"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Spike-and-slab posterior estimator (Exercise 14.8)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.8"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Laplace-prior posterior estimator (Exercise 14.9)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.9"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Marginal-density calculations (Exercises 14.9 and 14.11)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.9",
+        "14.11"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gaussian covariance MMSE and MAP (Exercise 14.10)": {
+      "owner": "Posterior mean and posterior mode",
+      "exercise_ids": [
+        "14.10"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Maximum-likelihood LDA parameters (Exercise 14.12)": {
+      "owner": "Generative classification models",
+      "exercise_ids": [
+        "14.12"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Quadratic discriminant analysis (Exercise 14.13)": {
+      "owner": "Generative classification models",
+      "exercise_ids": [
+        "14.13"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Euclidean-ball packing lower bound (Exercise 15.1)": {
+      "owner": "Regression minimax lower bounds",
+      "exercise_ids": [
+        "15.1"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "First-order-oracle extension for differentiable Lipschitz objectives (Exercise 15.2)": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "exercise_ids": [
+        "15.2"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Random-query covering lower bound (Exercise 15.3)": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "exercise_ids": [
+        "15.3"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Gradient-Lipschitz zeroth-order lower bound (Exercise 15.4)": {
+      "owner": "Derivative-free nonconvex lower bounds",
+      "exercise_ids": [
+        "15.4"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    },
+    "Quadratic stochastic-gradient lower bound (Exercise 15.5)": {
+      "owner": "Stochastic first-order lower bounds",
+      "exercise_ids": [
+        "15.5"
+      ],
+      "mapping": {
+        "status": "pending",
+        "tier2_node_ids": []
+      }
+    }
+  }
+}
