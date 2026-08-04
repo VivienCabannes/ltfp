@@ -2427,8 +2427,11 @@
         "1.9"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "Markov's inequality",
+          "Threshold indicator bound for Markov's inequality"
+        ]
       }
     },
     "Chernoff bound (Exercise 1.10)": {
@@ -2437,8 +2440,10 @@
         "1.10"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "Chernoff bound"
+        ]
       }
     },
     "Tail-integral expectation identity (Exercise 1.11)": {
@@ -2447,8 +2452,10 @@
         "1.11"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "Nonnegative tail-integral expectation identity"
+        ]
       }
     },
     "Gaussian tail sandwich (Exercise 1.12)": {
@@ -2597,8 +2604,12 @@
         "1.26"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "Affine interpolation local error (Exercise 1.26)",
+          "Affine panel integral identity",
+          "Affine panel interpolant"
+        ]
       }
     },
     "First-derivative error rate (Exercise 1.27)": {
@@ -2607,8 +2618,10 @@
         "1.27"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "First-derivative error rate (Exercise 1.27)"
+        ]
       }
     },
     "Periodic smooth-function error rate (Exercise 1.28)": {
@@ -2617,8 +2630,11 @@
         "1.28"
       ],
       "mapping": {
-        "status": "pending",
-        "tier2_node_ids": []
+        "status": "mapped",
+        "tier2_node_ids": [
+          "Periodic Bernoulli-kernel trapezoidal identity",
+          "Periodic smooth-function error rate (Exercise 1.28)"
+        ]
       }
     },
     "Rectangular matrix Hoeffding and Bernstein (Exercise 1.29)": {

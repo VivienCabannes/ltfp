@@ -21,7 +21,7 @@
     "lean_root": "/home/vivc/code/learning-theory-from-first-principles",
     "lean_toolchain": "leanprover/lean4:v4.32.2",
     "mathlib_revision": "905b95818eb32af7874a58b427f50c1711a5e96c",
-    "last_updated": "2026-08-04T12:11:25Z"
+    "last_updated": "2026-08-04T14:26:37Z"
   },
   "nodes": {
     "Finite-dimensional linear algebra and spectral theory": {
@@ -6003,6 +6003,1236 @@
       "mathlib_notes": "Verified in the pinned checkout. The complete-subspace existence theorem assumes only completeness of the subspace and derives convexity and nonemptiness before applying complete-convex minimizer existence; ambient completeness is unnecessary. The real convex-set theorem characterizes a minimizer by inner Real (u - v) (w - v) <= 0 and uses norm_sub_sq. The real and RCLike submodule variants characterize minimizers by inner K (u - v) w = 0. Only existence needs completeness. HasOrthogonalProjection.ofCompleteSpace uses the existence theorem and RCLike equivalence; starProjection_minimal directly uses the RCLike equivalence.",
       "source_refs": [],
       "content": "informal_content/minimizer-characterizations-for-convex-sets-and-subspaces.md"
+    },
+    "Uniform-grid trapezoidal estimator": {
+      "id": "Uniform-grid trapezoidal estimator",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "definition",
+      "description": "The uniform N-panel trapezoidal sum on an oriented real interval.",
+      "depends_on": [],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "trapezoidal_integral",
+        "trapezoidal_integral_symm"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean",
+      "mathlib_notes": "Verified in the pinned checkout. trapezoidal_integral is the total real-valued uniform-grid expression for an arbitrary function Real -> Real, with no regularity assumption. At N = 0 totalized division makes the estimator exactly zero. trapezoidal_integral_symm requires 0 < N and negates the value under endpoint reversal; the nontrivial grid-decomposition and error-bound results likewise require positivity.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 18"
+        }
+      ],
+      "content": "informal_content/uniform-grid-trapezoidal-estimator.md"
+    },
+    "Affine panel interpolant": {
+      "id": "Affine panel interpolant",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "definition",
+      "description": "The normalized affine line through two endpoint values.",
+      "depends_on": [
+        "Affine line maps"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "AffineMap.lineMap",
+        "AffineMap.lineMap_apply_ring",
+        "AffineMap.lineMap_apply_zero",
+        "AffineMap.lineMap_apply_one"
+      ],
+      "mathlib_file": "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean",
+      "mathlib_notes": "Verified in the pinned checkout. AffineMap.lineMap is the parameter-zero-to-one affine map through two values and the listed application lemmas are exact. Evaluating it at (x - a) / (b - a) defines a total normalized panel function. Rewriting the first coefficient as (b - x) / (b - a) requires a != b. Both endpoint identities hold in that case; when a = b, totalized division and equal endpoint values make the function constantly f a, so the coincident endpoint identity also holds. No named declaration bundles that normalized-coordinate assembly.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.26"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.26, printed page 4"
+        }
+      ],
+      "content": "informal_content/affine-panel-interpolant.md"
+    },
+    "Affine panel integral identity": {
+      "id": "Affine panel integral identity",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "lemma",
+      "description": "The oriented integral of the affine endpoint interpolant equals its signed endpoint trapezoid area.",
+      "depends_on": [
+        "Affine panel interpolant",
+        "Interval integral"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "AffineMap.lineMap_apply_ring",
+        "Continuous.intervalIntegrable",
+        "intervalIntegral.integral_add",
+        "intervalIntegral.integral_mul_const",
+        "intervalIntegral.integral_const",
+        "integral_id",
+        "trapezoidal_integral_one"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. For arbitrary f and endpoints a,b, the normalized AffineMap.lineMap interpolant is continuous and interval integrable, and its oriented integral equals (b-a)/2 * (f a + f b), hence trapezoidal_integral f 1 a b. No order or regularity assumption is needed. The change-of-variables proof uses a != b; the totalized identity also holds at a = b because both sides vanish. No single named affine-integral theorem exists.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.26"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.26, printed page 4"
+        }
+      ],
+      "content": "informal_content/affine-panel-integral-identity.md"
+    },
+    "Piecewise-affine integral identity": {
+      "id": "Piecewise-affine integral identity",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "proposition",
+      "description": "The sum of the uniform-grid affine panel integrals is the oriented trapezoidal estimator.",
+      "depends_on": [
+        "Uniform-grid trapezoidal estimator",
+        "Affine panel integral identity"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "trapezoidal_integral_one",
+        "sum_trapezoidal_integral_adjacent_intervals"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. For any endpoints and 0 < N, rewrite each affine-panel integral as trapezoidal_integral f 1 on the adjacent grid points and apply sum_trapezoidal_integral_adjacent_intervals, using a + N * ((b-a)/N) = b. The identity is oriented and needs no a < b assumption. At N = 0 the narrow sum and estimator are both zero, but the grid endpoint interpretation fails unless a = b. A stronger global stitched-interpolant integral claim would need an additional definition and intervalIntegral.sum_integral_adjacent_intervals.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed pages 18-19"
+        }
+      ],
+      "content": "informal_content/piecewise-affine-integral-identity.md"
+    },
+    "Exact trapezoidal error decomposition": {
+      "id": "Exact trapezoidal error decomposition",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "proposition",
+      "description": "The oriented global quadrature error is the sum of panel errors and affine interpolation residual integrals.",
+      "depends_on": [
+        "Piecewise-affine integral identity",
+        "Interval integrability",
+        "Interval integral"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "trapezoidal_error",
+        "trapezoidal_integral_one",
+        "sum_trapezoidal_integral_adjacent_intervals",
+        "sum_trapezoidal_error_adjacent_intervals",
+        "intervalIntegral.sum_integral_adjacent_intervals",
+        "intervalIntegral.integral_sub",
+        "IntervalIntegrable.mono"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. For 0 < N and IntervalIntegrable f volume a b, negating sum_trapezoidal_error_adjacent_intervals gives the source sign integral-minus-estimator as the sum of panel errors. Panel restriction, finite interval additivity, integral_sub, and the affine-panel identity give the residual form. No endpoint order is required. At N = 0 the decomposition is generally false because the estimator and panel sum are zero but the integral need not be. Generic interval declarations are in Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.lean.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19"
+        }
+      ],
+      "content": "informal_content/exact-trapezoidal-error-decomposition.md"
+    },
+    "Affine interpolation local error (Exercise 1.26)": {
+      "id": "Affine interpolation local error (Exercise 1.26)",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "theorem",
+      "description": "The sharp pointwise affine-interpolation residual bound under a uniform second-derivative bound.",
+      "depends_on": [
+        "Affine panel interpolant",
+        "Iterated Frechet derivative",
+        "Rolle's theorem for real derivatives"
+      ],
+      "mathlib_status": "missing",
+      "mathlib_declarations": [],
+      "mathlib_notes": "No named affine-interpolation error theorem with the sharp factor 1/2 was found in the pinned checkout. The source-faithful statement assumes DifferentiableOn f on Icc and DifferentiableOn (derivWithin f Icc) on Icc, not the stronger ContDiffOn order 2. Three applications of Rolle's theorem give the signed remainder f x - A x = (f'' xi / 2) * (x-a) * (x-b). iteratedDerivWithin_one and iteratedDerivWithin_succ express the second within derivative, while HasDerivWithinAt.hasDerivAt converts the within witnesses to ordinary derivatives at interior points. The Taylor bound taylor_mean_remainder_bound alone has the wrong coefficient for this sharp result.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.26"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.26, printed page 4"
+        }
+      ],
+      "content": "informal_content/affine-interpolation-local-error-exercise-1-26.md"
+    },
+    "Second-derivative trapezoidal error bound": {
+      "id": "Second-derivative trapezoidal error bound",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "theorem",
+      "description": "The sharp uniform-grid twice-differentiable trapezoidal bound on an unordered interval.",
+      "depends_on": [
+        "Exact trapezoidal error decomposition",
+        "Affine interpolation local error (Exercise 1.26)"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "trapezoidal_error_le",
+        "trapezoidal_error_le_of_c2"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean",
+      "mathlib_notes": "Verified by compiled applications in the pinned checkout. The primary theorem trapezoidal_error_le assumes differentiability of f and its within derivative on Set.uIcc a b, a uniform bound on iteratedDerivWithin 2, and 0 < N; it gives exactly abs (b-a)^3 * L / (12 * N^2). An interval-only bound with 0 <= L extends to Mathlib's all-real bound because the totalized within derivative vanishes off the interval. Arbitrary endpoint orientation, the [0,1] specialization, and reversal from estimator-minus-integral to the source sign all compile. No separate integrability hypothesis is needed. trapezoidal_error_le_of_c2 is only a stronger-hypothesis convenience corollary.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19"
+        }
+      ],
+      "content": "informal_content/second-derivative-trapezoidal-error-bound.md"
+    },
+    "First-derivative error rate (Exercise 1.27)": {
+      "id": "First-derivative error rate (Exercise 1.27)",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "theorem",
+      "description": "A concrete L times interval-length-squared over 4N trapezoidal bound for a differentiable function with bounded derivative.",
+      "depends_on": [
+        "Exact trapezoidal error decomposition",
+        "Frechet derivative",
+        "Fundamental theorem of calculus for interval integrals"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "intervalIntegral.integral_mul_deriv_eq_deriv_mul_of_hasDerivWithinAt",
+        "sum_trapezoidal_error_adjacent_intervals",
+        "MeasureTheory.aemeasurable_fderivWithin",
+        "intervalIntegral.norm_integral_le_of_norm_le",
+        "derivWithin_subset"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/IntervalIntegral/IntegrationByParts.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. It suffices that a < b, 0 < N, f is DifferentiableOn Real on Set.Icc a b, and abs (derivWithin f (Set.Icc a b) x) <= L throughout the interval. No ContDiffOn or separate integrability hypothesis is needed: aemeasurable_fderivWithin and bounded domination give interval integrability of the derivative. Integration by parts with the midpoint kernel and sum_trapezoidal_error_adjacent_intervals give exactly abs (trapezoidal_error f N a b) <= L * (b-a)^2 / (4*N). No named first-derivative trapezoidal-rate theorem was found.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.27"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.27, printed page 4"
+        }
+      ],
+      "content": "informal_content/first-derivative-error-rate-exercise-1-27.md"
+    },
+    "Periodic Bernoulli-kernel trapezoidal identity": {
+      "id": "Periodic Bernoulli-kernel trapezoidal identity",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "lemma",
+      "description": "For s >= 1 and N > 0, an exact Bernoulli-panel representation of T_N(f;0,1) minus the integral, assuming C^s regularity and endpoint agreement of derivative orders 1 through s-1.",
+      "depends_on": [
+        "Exact trapezoidal error decomposition",
+        "Iterated Frechet derivative",
+        "Fundamental theorem of calculus for interval integrals"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "trapezoidal_error",
+        "sum_trapezoidal_error_adjacent_intervals",
+        "bernoulliFun",
+        "bernoulliFun_one",
+        "hasDerivAt_bernoulliFun",
+        "contDiff_bernoulliFun",
+        "bernoulliFun_endpoints_eq_of_ne_one",
+        "intervalIntegral.integral_mul_deriv_eq_deriv_mul",
+        "iteratedDeriv",
+        "iteratedDeriv_succ",
+        "ContDiff.continuous_iteratedDeriv",
+        "ContDiff.differentiable_iteratedDeriv"
+      ],
+      "mathlib_file": "Mathlib/NumberTheory/ZetaValues.lean",
+      "mathlib_notes": "Verified by a complete compiled assembly in the pinned checkout. With P_{r,k}(x)=B_r(Nx-k)/(r! N^r), Mathlib's Bernoulli derivative theorem gives P'_{r+1,k}=P_{r,k}. Integration by parts gives the positive s=1 panel identity and one minus sign at every subsequent order. Bernoulli endpoint equality makes the summed boundary terms telescope; compatibility is needed exactly for derivative orders 1 <= r < s. Mathlib has all ingredients but no packaged arbitrary-order quadrature identity.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.28"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.28, printed page 4"
+        }
+      ],
+      "content": "informal_content/periodic-bernoulli-kernel-trapezoidal-identity.md"
+    },
+    "Periodic smooth-function error rate (Exercise 1.28)": {
+      "id": "Periodic smooth-function error rate (Exercise 1.28)",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "theorem",
+      "description": "An explicit C_s M / N^s trapezoidal bound for a one-periodic C^s function.",
+      "depends_on": [
+        "Periodic Bernoulli-kernel trapezoidal identity",
+        "Iterated Frechet derivative"
+      ],
+      "mathlib_status": "missing",
+      "mathlib_declarations": [],
+      "mathlib_notes": "No matching periodic trapezoidal-rate theorem exists in pinned Mathlib. Compiled checks verify periodicity of every iteratedDeriv from Function.Periodic.funext and iteratedDeriv_comp_add_const, the exact panel substitution via intervalIntegral.integral_comp_mul_sub, and the resulting atTop Big-O corollary. The raw panel polynomial bernoulliFun is appropriate for every s >= 1; periodizedBernoulli.continuous excludes s = 1.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2.5, printed page 19, Exercise 1.28"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.28, printed page 4"
+        }
+      ],
+      "content": "informal_content/periodic-smooth-function-error-rate-exercise-1-28.md"
+    },
+    "Pseudometric distance": {
+      "id": "Pseudometric distance",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Real-valued pseudometric distance, its axioms, extended-distance realization, and metric separation.",
+      "depends_on": [
+        "Extended pseudometric distance and balls"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Dist",
+        "Dist.dist",
+        "PseudoMetricSpace",
+        "PseudoMetricSpace.toPseudoEMetricSpace",
+        "MetricSpace",
+        "dist_self",
+        "dist_comm",
+        "dist_triangle",
+        "dist_nonneg",
+        "edist_dist"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+      "mathlib_notes": "Verified in the pinned checkout. PseudoMetricSpace supplies a real distance and induces PseudoEMetricSpace through PseudoMetricSpace.toPseudoEMetricSpace. edist_dist identifies the induced extended distance with ENNReal.ofReal dist, so it is finite. MetricSpace is defined in Mathlib/Topology/MetricSpace/Defs.lean and adds zero-distance separation.",
+      "source_refs": [],
+      "content": "informal_content/pseudometric-distance.md"
+    },
+    "Metric open balls": {
+      "id": "Metric open balls",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Open balls defined by strict real-valued distance, including openness and measurability.",
+      "depends_on": [
+        "Pseudometric distance",
+        "Open-measurable and Borel spaces"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.ball",
+        "Metric.mem_ball",
+        "Metric.mem_ball'",
+        "Metric.ball_eq_empty",
+        "Metric.isOpen_ball",
+        "measurableSet_ball"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Definition, membership, and openness require only PseudoMetricSpace; a ball is empty exactly for nonpositive real radius. measurableSet_ball is in Mathlib/MeasureTheory/Constructions/BorelSpace/Metric.lean and additionally requires MeasurableSpace and OpensMeasurableSpace. No measure or separation assumption is needed.",
+      "source_refs": [],
+      "content": "informal_content/metric-open-balls.md"
+    },
+    "Metric closed balls": {
+      "id": "Metric closed balls",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Closed balls defined by non-strict real-valued distance, including closedness and measurability.",
+      "depends_on": [
+        "Pseudometric distance",
+        "Open-measurable and Borel spaces"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.closedBall",
+        "Metric.mem_closedBall",
+        "Metric.mem_closedBall'",
+        "Metric.closedBall_eq_empty",
+        "Metric.closedBall_eq_sphere_of_nonpos",
+        "Metric.closedBall_zero'",
+        "Metric.isClosed_closedBall",
+        "measurableSet_closedBall"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/Pseudo/Defs.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Definition and membership require only PseudoMetricSpace. Negative-radius balls are empty; a zero-radius ball is closure {x} and need not be a singleton. closedBall_zero' and isClosed_closedBall are in Mathlib/Topology/MetricSpace/Pseudo/Lemmas.lean. measurableSet_closedBall is in Mathlib/MeasureTheory/Constructions/BorelSpace/Metric.lean and requires OpensMeasurableSpace; no measure is involved.",
+      "source_refs": [],
+      "content": "informal_content/metric-closed-balls.md"
+    },
+    "Extended-metric epsilon-covers": {
+      "id": "Extended-metric epsilon-covers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Covers in an extended pseudometric space using closed balls and non-strict extended distance.",
+      "depends_on": [
+        "Extended pseudometric distance and balls",
+        "Metric closed balls"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.IsCover",
+        "Metric.isCover_iff_subset_iUnion_closedEBall",
+        "Metric.isCover_iff_subset_iUnion_closedBall",
+        "Metric.isCover_zero"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/Cover.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under PseudoEMetricSpace, IsCover takes an NNReal radius and uses edist and closedEBall. Under PseudoMetricSpace it is also characterized by real closedBall unions. The EMetricSpace theorem isCover_zero identifies zero-covering with set containment; this need not hold without separation. No compactness or measurability is assumed.",
+      "source_refs": [],
+      "content": "informal_content/extended-metric-epsilon-covers.md"
+    },
+    "Extended-metric separated sets": {
+      "id": "Extended-metric separated sets",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Quantitatively separated subsets of an extended pseudometric space.",
+      "depends_on": [
+        "Extended pseudometric distance and balls"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.IsSeparated",
+        "Metric.isSeparated_iff_setRelIsSeparated",
+        "Metric.isSeparated_zero"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/MetricSeparated.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under PseudoEMetricSpace, IsSeparated has ENNReal radius and is Set.Pairwise (epsilon < edist x y). At radius top only subsingletons qualify. isSeparated_zero requires EMetricSpace separation and fails in general for distinct points at zero edistance.",
+      "source_refs": [],
+      "content": "informal_content/extended-metric-separated-sets.md"
+    },
+    "External covering numbers": {
+      "id": "External covering numbers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Minimum extended cardinality of a cover whose centers may lie anywhere.",
+      "depends_on": [
+        "Extended-metric epsilon-covers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.externalCoveringNumber",
+        "Metric.IsCover.externalCoveringNumber_le_encard",
+        "Metric.externalCoveringNumber_anti",
+        "Metric.externalCoveringNumber_mono_set"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under PseudoEMetricSpace, externalCoveringNumber takes an NNReal radius and is the ENat infimum of encard over all IsCover center sets, without requiring centers to lie in the covered set. It may be top. The API gives the expected antitonicity in radius and monotonicity in the covered set; no finiteness, compactness, or measurability premise is present.",
+      "source_refs": [],
+      "content": "informal_content/external-covering-numbers.md"
+    },
+    "Internal covering numbers": {
+      "id": "Internal covering numbers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Minimum extended cardinality of a cover whose centers belong to the covered set.",
+      "depends_on": [
+        "Extended-metric epsilon-covers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.coveringNumber",
+        "Metric.IsCover.coveringNumber_le_encard",
+        "Metric.coveringNumber_anti",
+        "Metric.minimalCover",
+        "Metric.minimalCover_subset",
+        "Metric.finite_minimalCover",
+        "Metric.isCover_minimalCover",
+        "Metric.encard_minimalCover"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under PseudoEMetricSpace, coveringNumber takes an NNReal radius and is the ENat infimum of encard over IsCover center sets constrained to lie in A. If the value is not top, minimalCover is a finite subset of A, covers A, and realizes the value without compactness or total-boundedness assumptions. If the value is top, minimalCover is empty and the cover/realization theorems require the explicit non-top hypothesis.",
+      "source_refs": [],
+      "content": "informal_content/internal-covering-numbers.md"
+    },
+    "Packing numbers": {
+      "id": "Packing numbers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Supremum of the extended cardinalities of separated subsets.",
+      "depends_on": [
+        "Extended-metric epsilon-covers",
+        "Extended-metric separated sets"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.packingNumber",
+        "Metric.IsSeparated.encard_le_packingNumber",
+        "Metric.maximalSeparatedSet",
+        "Metric.maximalSeparatedSet_subset",
+        "Metric.isSeparated_maximalSeparatedSet",
+        "Metric.encard_maximalSeparatedSet",
+        "Metric.isCover_maximalSeparatedSet"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. packingNumber is an ENat supremum, not an unconditionally attained maximum; top may express unbounded finite packings without an infinite realizer. If the value is not top, maximalSeparatedSet is a finite subset realizing it and also an epsilon-cover. At top the chosen set is empty and realization/cover theorems do not apply.",
+      "source_refs": [],
+      "content": "informal_content/packing-numbers.md"
+    },
+    "External covering number bounded by internal covering number": {
+      "id": "External covering number bounded by internal covering number",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "lemma",
+      "description": "External covers never require more centers than internal covers at the same radius.",
+      "depends_on": [
+        "External covering numbers",
+        "Internal covering numbers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.externalCoveringNumber_le_coveringNumber"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For every PseudoEMetricSpace, NNReal radius, and subset, the external ENat infimum is at most the internal ENat infimum because every internal cover is an admissible external cover. No finiteness or nonemptiness assumption is needed.",
+      "source_refs": [],
+      "content": "informal_content/external-covering-number-bounded-by-internal-covering-number.md"
+    },
+    "Packing numbers bounded by external covering numbers": {
+      "id": "Packing numbers bounded by external covering numbers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "A 2 * epsilon packing is bounded by an external epsilon cover.",
+      "depends_on": [
+        "Packing numbers",
+        "External covering numbers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.packingNumber_two_mul_le_externalCoveringNumber"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. In every PseudoEMetricSpace, packingNumber (2 * epsilon) A is at most externalCoveringNumber epsilon A. Strict separation and the triangle inequality make a chosen covering-center map injective; no nearest-center existence is assumed. The ENat theorem includes top-valued cases.",
+      "source_refs": [],
+      "content": "informal_content/packing-numbers-bounded-by-external-covering-numbers.md"
+    },
+    "Covering numbers bounded by packing numbers": {
+      "id": "Covering numbers bounded by packing numbers",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "The internal covering number is bounded by the packing number at the same radius.",
+      "depends_on": [
+        "Internal covering numbers",
+        "Packing numbers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.coveringNumber_le_packingNumber"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. In every PseudoEMetricSpace, coveringNumber epsilon A is at most packingNumber epsilon A at the same NNReal radius. The proof uses the realizing maximal separated cover below top and handles the top case separately, so no finiteness assumption appears in the theorem.",
+      "source_refs": [],
+      "content": "informal_content/covering-numbers-bounded-by-packing-numbers.md"
+    },
+    "Doubled-radius covering number bound": {
+      "id": "Doubled-radius covering number bound",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "The internal covering number at doubled radius is bounded by the external covering number.",
+      "depends_on": [
+        "Covering numbers bounded by packing numbers",
+        "Packing numbers bounded by external covering numbers"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "Metric.coveringNumber_two_mul_le_externalCoveringNumber"
+      ],
+      "mathlib_file": "Mathlib/Topology/MetricSpace/CoveringNumbers.lean",
+      "mathlib_notes": "Verified in the pinned checkout. In every PseudoEMetricSpace, coveringNumber (2 * epsilon) A is at most externalCoveringNumber epsilon A. It composes the same-radius covering-packing bound with the doubled-radius packing-external bound and has no finiteness or nonemptiness premise.",
+      "source_refs": [],
+      "content": "informal_content/doubled-radius-covering-number-bound.md"
+    },
+    "Volume of Euclidean open balls": {
+      "id": "Volume of Euclidean open balls",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "Exact canonical volume of an open ball in a nonzero finite-dimensional Euclidean space.",
+      "depends_on": [
+        "Metric open balls"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "EuclideanSpace.volume_ball",
+        "EuclideanSpace.volume_preserving_symm_measurableEquiv_toLp",
+        "PiLp.volume_preserving_toLp"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Measure/Lebesgue/VolumeOfBalls.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For Fintype iota with Nonempty iota, EuclideanSpace.volume_ball gives the stated Gamma-function formula for canonical volume at every real radius. Nonemptiness makes card iota positive, so nonpositive radii give zero on both sides. The coordinate normalization is witnessed by the volume-preserving toLp equivalences in Mathlib/MeasureTheory/Measure/Haar/InnerProductSpace.lean.",
+      "source_refs": [],
+      "content": "informal_content/volume-of-euclidean-open-balls.md"
+    },
+    "Volume of Euclidean closed balls": {
+      "id": "Volume of Euclidean closed balls",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "Exact canonical volume of a closed ball in a nonzero finite-dimensional Euclidean space.",
+      "depends_on": [
+        "Metric closed balls",
+        "Volume of Euclidean open balls"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "EuclideanSpace.volume_closedBall",
+        "MeasureTheory.Measure.addHaar_closedBall_eq_addHaar_ball",
+        "MeasureTheory.Measure.addHaar_sphere"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Measure/Lebesgue/VolumeOfBalls.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For Fintype iota with Nonempty iota, volume_closedBall gives the same Gamma-function formula as volume_ball for every real radius. The closed/open equality and boundary-null addHaar_sphere theorem are in Mathlib/MeasureTheory/Measure/Lebesgue/EqHaar.lean.",
+      "source_refs": [],
+      "content": "informal_content/volume-of-euclidean-closed-balls.md"
+    },
+    "Measurable spaces and sets": {
+      "id": "Measurable spaces and sets",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Sigma-algebra structure and closure properties of measurable sets.",
+      "depends_on": [],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasurableSpace",
+        "MeasurableSet",
+        "MeasurableSet.empty",
+        "MeasurableSet.univ",
+        "MeasurableSet.compl",
+        "MeasurableSet.inter",
+        "MeasurableSet.union",
+        "MeasurableSet.iUnion"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/MeasurableSpace/Defs.lean",
+      "mathlib_notes": "Verified in the pinned checkout. MeasurableSpace is the primitive structure, MeasurableSet is its set predicate, and the listed closure API requires only the ambient measurable-space instance. MeasurableSet.iUnion accepts any Countable index type and has no measure or nonemptiness premise. Generated sigma-algebra declarations are intentionally not part of this node.",
+      "source_refs": [],
+      "content": "informal_content/measurable-spaces-and-sets.md"
+    },
+    "Canonical finite measurable partitions": {
+      "id": "Canonical finite measurable partitions",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "A chosen sequence of finite measurable partitions generating a countably generated measurable space.",
+      "depends_on": [
+        "Countably generated measurable spaces"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasurableSpace.countablePartition",
+        "MeasurableSpace.finite_countablePartition",
+        "MeasurableSpace.disjoint_countablePartition",
+        "MeasurableSpace.sUnion_countablePartition",
+        "MeasurableSpace.measurableSet_countablePartition",
+        "MeasurableSpace.generateFrom_countablePartition_le_succ",
+        "MeasurableSpace.generateFrom_iUnion_countablePartition"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/MeasurableSpace/CountablyGenerated.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under MeasurableSpace.CountablyGenerated, countablePartition starts at {univ} and successively splits cells by the chosen generating sequence. Every level is finite, measurable, pairwise disjoint, and covers univ, though empty cells remain. Generated measurable spaces increase and all levels together generate the original structure. The construction depends on chosen generator/enumeration data.",
+      "source_refs": [],
+      "content": "informal_content/canonical-finite-measurable-partitions.md"
+    },
+    "Measure restriction": {
+      "id": "Measure restriction",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Restriction of an arbitrary measure to an arbitrary subset.",
+      "depends_on": [
+        "Measurable spaces and sets"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasureTheory.Measure.restrict",
+        "MeasureTheory.Measure.restrict_apply",
+        "MeasureTheory.Measure.restrict_apply'",
+        "MeasureTheory.Measure.restrict_apply_self",
+        "MeasureTheory.Measure.restrict_eq_zero",
+        "MeasureTheory.Measure.restrict_le_self",
+        "MeasureTheory.Measure.absolutelyContinuous_restrict",
+        "MeasureTheory.ae_restrict_mem"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Measure.restrict is defined for an arbitrary measure and arbitrary subset. restrict_apply requires the evaluated set measurable; restrict_apply' instead requires the restricting set measurable and allows arbitrary evaluated sets. For arbitrary s, restriction evaluates to mu s on s, is zero iff mu s is zero, lies below mu, and is absolutely continuous with respect to mu. Almost-everywhere concentration on s requires s to be measurable. No probability, finiteness, or sigma-finiteness assumption is used.",
+      "source_refs": [],
+      "content": "informal_content/measure-restriction.md"
+    },
+    "Restriction over countable measurable partitions": {
+      "id": "Restriction over countable measurable partitions",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "theorem",
+      "description": "A measure restricted to a countable disjoint measurable union is the sum of its cell restrictions.",
+      "depends_on": [
+        "Measurable spaces and sets",
+        "Measure restriction"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasureTheory.Measure.restrict_iUnion",
+        "MeasureTheory.Measure.restrict_iUnion_ae",
+        "MeasureTheory.Measure.restrict_univ"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Measure/Restrict.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Measure.restrict_iUnion assumes a Countable index type, pairwise set-theoretic Disjoint cells, and MeasurableSet for every cell, and gives the exact sum-of-restrictions equality for an arbitrary measure. No union-coverage or finiteness premise occurs; coverage plus restrict_univ gives the partition specialization. restrict_iUnion_ae generalizes the hypotheses to pairwise AEDisjoint mu and NullMeasurableSet. No CountablyGenerated assumption is involved.",
+      "source_refs": [],
+      "content": "informal_content/restriction-over-countable-measurable-partitions.md"
+    },
+    "Variance of a finite sum of pairwise independent random variables": {
+      "id": "Variance of a finite sum of pairwise independent random variables",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The variance of a finite sum of pairwise independent square-integrable real random variables is the sum of their variances.",
+      "depends_on": [
+        "Pairwise independence on a finite index set"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.IndepFun.variance_sum"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Variance.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For an arbitrary measure mu, arbitrary index type, Finset s, and real-valued family X, the theorem assumes MemLp (X i) 2 mu only for i in s and Set.Pairwise on s of binary IndepFun. It requires no IsProbabilityMeasure, IsFiniteMeasure, Fintype, or identical-distribution hypothesis. Variance is total; MemLp supplies the regularity required by this theorem.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, independent-sum variance display"
+        }
+      ],
+      "content": "informal_content/variance-of-a-finite-sum-of-pairwise-independent-random-variables.md"
+    },
+    "Variance of an iid sample mean": {
+      "id": "Variance of an iid sample mean",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "An iid sample mean of positive sample size has variance equal to the common variance divided by the sample size.",
+      "depends_on": [
+        "Identically distributed random variables",
+        "Variance of a finite sum of pairwise independent random variables"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "ProbabilityTheory.variance_smul",
+        "ProbabilityTheory.IndepFun.variance_sum",
+        "ProbabilityTheory.IdentDistrib.variance_eq",
+        "ProbabilityTheory.IdentDistrib.memLp_snd"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Variance.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. For arbitrary mu and positive n, it suffices to assume MemLp (X 0) 2 mu, IdentDistrib (X 0) (X i) mu mu for i < n, and pairwise IndepFun on Finset.range n. IdentDistrib.memLp_snd transports MemLp, IndepFun.variance_sum adds variances, IdentDistrib.variance_eq identifies them, and variance_smul supplies inverse-square scaling. No probability- or finite-measure instance is needed. IdentDistrib declarations are in Mathlib/Probability/IdentDistrib.lean.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, sample-mean variance display"
+        }
+      ],
+      "content": "informal_content/variance-of-an-iid-sample-mean.md"
+    },
+    "Mean-square error identity for an iid sample mean": {
+      "id": "Mean-square error identity for an iid sample mean",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The expected squared error of an iid sample mean equals the common variance divided by the positive sample size.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Variance of an iid sample mean",
+        "Identically distributed random variables"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "ProbabilityTheory.variance_eq_integral",
+        "ProbabilityTheory.IdentDistrib.integral_eq",
+        "MeasureTheory.integral_finsetSum",
+        "MeasureTheory.integral_smul"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Variance.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. On a probability space, MemLp (X 0) 2 implies integrability, IdentDistrib.integral_eq identifies all sampled means, and integral_finsetSum plus integral_smul centers the sample mean at the common expectation. The symmetric form of variance_eq_integral then reduces the result to the upstream iid sample-mean variance formula. The exact statement requires 0 < n; the n = 0 mean-square identity is generally false. Supporting declarations also occur in Mathlib/Probability/IdentDistrib.lean and Mathlib/MeasureTheory/Integral/Bochner/Basic.lean.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, equation (1.4)"
+        }
+      ],
+      "content": "informal_content/mean-square-error-identity-for-an-iid-sample-mean.md"
+    },
+    "Mean-square convergence of iid sample means": {
+      "id": "Mean-square convergence of iid sample means",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "Square-integrable iid sample means converge in L2 to their common expectation.",
+      "depends_on": [
+        "Mean-square error identity for an iid sample mean"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.strong_law_Lp"
+      ],
+      "mathlib_file": "Mathlib/Probability/StrongLaw.lean",
+      "mathlib_notes": "Verified by a compiled specialization of ProbabilityTheory.strong_law_Lp in the pinned checkout. At p = 2 and E = Real, MemLp (X 0) 2 mu, global pairwise independence Pairwise ((fun i j => IndepFun (X i) (X j) mu) on X), and IdentDistrib (X i) (X 0) mu mu for every i give Tendsto of the L2 seminorm of the centered Finset.range n average to zero. The source dependency route instead squares the seminorm, applies the upstream mean-square identity Var[X 0; mu] / n, and uses its limit. The theorem needs no explicit IsProbabilityMeasure mu instance. Its n = 0 average is totalized to zero and is irrelevant to the atTop limit.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, paragraph following equation (1.4)"
+        }
+      ],
+      "content": "informal_content/mean-square-convergence-of-iid-sample-means.md"
+    },
+    "Finite deviation bound for an iid sample mean": {
+      "id": "Finite deviation bound for an iid sample mean",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "Chebyshev's finite-sample deviation estimate for an iid sample mean.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Variance of an iid sample mean",
+        "Chebyshev's inequality",
+        "Identically distributed random variables"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "ProbabilityTheory.meas_ge_le_variance_div_sq",
+        "ProbabilityTheory.IdentDistrib.integral_eq",
+        "ProbabilityTheory.IdentDistrib.memLp_snd",
+        "MeasureTheory.integral_finsetSum",
+        "MeasureTheory.integral_smul",
+        "MeasureTheory.memLp_finsetSum'",
+        "MeasureTheory.MemLp.const_smul"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Variance.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. On a probability space, MemLp (X 0) 2, IdentDistrib for i < n, pairwise IndepFun on Finset.range n, 0 < n, and 0 < epsilon suffice. IdentDistrib transports MemLp and expectations; finite-sum/scalar integral and MemLp closure establish the common center and Chebyshev premise; the upstream iid variance formula supplies Var[A_n] = Var[X 0]/n. The assembly proves the stronger closed-threshold event bound; the source's strict-event bound follows by inclusion. Supporting declarations span IdentDistrib, Bochner, and Lp-seminorm files.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, finite sample-mean deviation display"
+        }
+      ],
+      "content": "informal_content/finite-deviation-bound-for-an-iid-sample-mean.md"
+    },
+    "Convergence in probability of iid sample means": {
+      "id": "Convergence in probability of iid sample means",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "corollary",
+      "description": "Square-integrable iid sample means converge in probability to their common expectation.",
+      "depends_on": [
+        "Finite deviation bound for an iid sample mean"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "MeasureTheory.tendstoInMeasure_iff_measureReal_dist",
+        "MeasureTheory.tendstoInMeasure_of_tendsto_eLpNorm",
+        "ProbabilityTheory.strong_law_Lp"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Function/ConvergenceInMeasure.lean",
+      "mathlib_notes": "Verified by two compiled assemblies in the pinned checkout; no single dedicated weak-law declaration matches the node. The direct source route uses tendstoInMeasure_iff_measureReal_dist under the finite-measure instance supplied by a probability measure. For epsilon > 0, its closed-threshold event is contained in the source's strict event at epsilon/2, so the finite deviation bound eventually for n > 0 squeezes its probability below Var[X 0; mu] / ((n : Real) * (epsilon/2)^2), which tends to zero. The n = 0 average is totalized to zero and is irrelevant atTop. An alternative compiled route combines strong_law_Lp at p = 2 with tendstoInMeasure_of_tendsto_eLpNorm, but it is not the dependency route recorded here.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, sentence following the finite deviation bound"
+        }
+      ],
+      "content": "informal_content/convergence-in-probability-of-iid-sample-means.md"
+    },
+    "Scalar iid central limit theorem": {
+      "id": "Scalar iid central limit theorem",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The centered square-root-scaled iid sample sum converges in distribution to its Gaussian limit.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Law of a random variable",
+        "Identically distributed random variables",
+        "Independent family of random variables"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.tendstoInDistribution_inv_sqrt_mul_sum_sub"
+      ],
+      "mathlib_file": "Mathlib/Probability/CentralLimitTheorem.lean",
+      "mathlib_notes": "Verified in the pinned checkout. With probability measures P and P', HasLaw Y (gaussianReal 0 Var[X 0; P].toNNReal) P', MemLp (X 0) 2 P, iIndepFun X P, and IdentDistrib (X i) (X 0) P P for every i, the exact n-indexed centered inverse-square-root sum tends to Y in distribution. IdentDistrib supplies sample measurability. The theorem includes n = 0 in the sequence and handles zero variance separately.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed pages 8-9, central-limit-theorem paragraph"
+        }
+      ],
+      "content": "informal_content/scalar-iid-central-limit-theorem.md"
+    },
+    "Threshold indicator bound for Markov's inequality": {
+      "id": "Threshold indicator bound for Markov's inequality",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "lemma",
+      "description": "The pointwise indicator bound used to derive Markov's inequality.",
+      "depends_on": [
+        "Probability measure",
+        "Random variable"
+      ],
+      "mathlib_status": "missing",
+      "mathlib_declarations": [],
+      "mathlib_notes": "Verified by a compiled direct proof in the pinned checkout and a declaration search. No dedicated theorem states the source's strict-event bound epsilon times the indicator of {epsilon < Y} <= Y; the same argument proves the stronger closed-threshold version. The proof uses generic Set.indicator simplification and Filter.Eventually reasoning. Although the source states a measurable nonnegative random variable on a probability space with epsilon > 0, this lemma itself needs only Y >= 0 almost everywhere under an arbitrary measure. Measurability and threshold positivity enter the subsequent integration and division steps; probability normalization is never needed and is retained only for the source context.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, Exercise 1.9, printed page 9"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.9, printed page 2"
+        }
+      ],
+      "content": "informal_content/threshold-indicator-bound-for-markovs-inequality.md"
+    },
+    "Markov's inequality": {
+      "id": "Markov's inequality",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The probability that a nonnegative integrable random variable exceeds a positive threshold is bounded by its expectation divided by the threshold.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Random variable",
+        "Threshold indicator bound for Markov's inequality"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasureTheory.mul_meas_ge_le_integral_of_nonneg"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/Bochner/Basic.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For an arbitrary measure, an almost-everywhere nonnegative integrable real function, and an arbitrary real epsilon, mul_meas_ge_le_integral_of_nonneg proves epsilon * mu.real {x | epsilon <= f x} <= integral f. The source uses the strict event {epsilon < f x}, whose bound follows by event inclusion, specialization to a probability measure and positive epsilon, and ordered-field division. Integrability already supplies the needed almost-everywhere measurability.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, equation (1.5) and Exercise 1.9, printed pages 8-9"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.9, printed page 2"
+        }
+      ],
+      "content": "informal_content/markovs-inequality.md"
+    },
+    "Chebyshev's inequality": {
+      "id": "Chebyshev's inequality",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "A square-integrable real random variable's centered deviation probability is bounded by its variance divided by the squared threshold.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Random variable",
+        "Markov's inequality"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.meas_ge_le_variance_div_sq"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Variance.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under IsFiniteMeasure mu, MemLp X 2 mu, and 0 < c, meas_ge_le_variance_div_sq bounds the closed-threshold event {c <= abs (X - integral X)} by ENNReal.ofReal (variance X mu / c^2). The source's strict event is a subset. A probability measure supplies the finite-measure instance, and finiteness permits the displayed measureReal specialization. No separate measurability premise is needed beyond MemLp.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, Chebyshev display"
+        }
+      ],
+      "content": "informal_content/chebyshevs-inequality.md"
+    },
+    "Countable union bound": {
+      "id": "Countable union bound",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The measure of a countable union is at most the sum of the component measures.",
+      "depends_on": [
+        "Probability measure"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasureTheory.measure_iUnion_le"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/OuterMeasure/Basic.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For any OuterMeasureClass-valued measure-like object mu and any index type with a Countable instance, measure_iUnion_le bounds mu of the indexed union by the ENNReal tsum of the component values. It needs neither set measurability nor pairwise disjointness. The source's probability-measure statement is an immediate specialization.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 9, union-bound display"
+        }
+      ],
+      "content": "informal_content/countable-union-bound.md"
+    },
+    "Supremum tail union bound": {
+      "id": "Supremum tail union bound",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "corollary",
+      "description": "The strict upper-tail measure of a pointwise bounded countable supremum is bounded by the sum of component tail measures.",
+      "depends_on": [
+        "Probability measure",
+        "Random variable",
+        "Countable union bound"
+      ],
+      "mathlib_status": "partial",
+      "mathlib_declarations": [
+        "MeasureTheory.measure_iUnion_le",
+        "lt_csSup_iff"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/OuterMeasure/Basic.lean",
+      "mathlib_notes": "Verified by a compiled Lean assembly in the pinned checkout. For a Countable nonempty index type and pointwise BddAbove real ranges, lt_csSup_iff identifies the strict supremum event with the indexed union, and measure_iUnion_le proves the bound for an arbitrary measure and arbitrary sets. The theorem itself needs no measurability or probability normalization; those are retained as the source-facing random-variable context. lt_csSup_iff is in Mathlib/Order/ConditionallyCompleteLattice/Basic.lean.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 9, supremum-tail union-bound display"
+        }
+      ],
+      "content": "informal_content/supremum-tail-union-bound.md"
+    },
+    "Chernoff bound": {
+      "id": "Chernoff bound",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "A random variable's upper-tail probability is bounded using its exponential moment.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Random variable",
+        "Markov's inequality"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.mgf",
+        "ProbabilityTheory.measure_ge_le_exp_mul_mgf"
+      ],
+      "mathlib_file": "Mathlib/Probability/Moments/Basic.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Under IsFiniteMeasure mu, 0 <= s, and Integrable (fun omega => exp (s * X omega)), measure_ge_le_exp_mul_mgf proves the closed-threshold upper-tail bound with factor exp (-s*t) * mgf X mu s. The source's strict event is a subset. The definition mgf is the displayed Bochner integral. A probability measure supplies finiteness; the source's s > 0 is a specialization. No separate measurability premise is needed beyond exponential integrability.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, Exercise 1.10, printed page 9"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.10, printed page 2"
+        }
+      ],
+      "content": "informal_content/chernoff-bound.md"
+    },
+    "Nonnegative tail-integral expectation identity": {
+      "id": "Nonnegative tail-integral expectation identity",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "theorem",
+      "description": "The expectation of a nonnegative integrable random variable equals the integral of its strict upper-tail probabilities.",
+      "depends_on": [
+        "Bochner integral",
+        "Probability measure",
+        "Random variable"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasureTheory.Integrable.integral_eq_integral_meas_lt",
+        "MeasureTheory.Integrable.integral_eq_integral_meas_le"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Integral/Layercake.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For an arbitrary measure and an integrable almost-everywhere nonnegative real function, integral_eq_integral_meas_lt is exactly the strict-tail Bochner layer-cake identity in the source; integral_eq_integral_meas_le supplies the non-strict companion. Integrable provides the needed almost-everywhere measurability and tail finiteness. No probability- or finite-measure instance is required by the Mathlib theorem.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, Exercise 1.11, printed page 9"
+        },
+        {
+          "file": "sources/ltfp_exercises.pdf",
+          "location": "Chapter 1, Exercise 1.11, printed page 2"
+        }
+      ],
+      "content": "informal_content/nonnegative-tail-integral-expectation-identity.md"
+    },
+    "Jensen's inequality on the real line": {
+      "id": "Jensen's inequality on the real line",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "proposition",
+      "description": "The value of a convex real function at an expectation is at most the expectation of the function.",
+      "depends_on": [
+        "Integral Jensen inequality",
+        "Convex functions on a set"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ConvexOn.map_integral_le",
+        "ConvexOn.continuousOn"
+      ],
+      "mathlib_file": "Mathlib/Analysis/Convex/Integral.lean",
+      "mathlib_notes": "Verified in the pinned checkout. ConvexOn.map_integral_le specialized to E = Real and s = Set.univ gives the exact probability-measure Jensen inequality for Integrable X and Integrable (F composed with X). Global real ConvexOn supplies ContinuousOn by ConvexOn.continuousOn because Real is finite dimensional and univ is open; that continuity theorem is defined in Mathlib/Analysis/Convex/Continuous.lean.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, Proposition 1.1, printed pages 9-10"
+        }
+      ],
+      "content": "informal_content/jensens-inequality-on-the-real-line.md"
+    },
+    "Affine line maps": {
+      "id": "Affine line maps",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "definition",
+      "description": "The affine map through two endpoints, parameterized to take them at zero and one.",
+      "depends_on": [],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "AffineMap.lineMap",
+        "AffineMap.lineMap_apply_ring",
+        "AffineMap.lineMap_apply_zero",
+        "AffineMap.lineMap_apply_one"
+      ],
+      "mathlib_file": "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean",
+      "mathlib_notes": "Verified in the pinned checkout. AffineMap.lineMap p0 p1 is the affine map taking parameter zero to p0 and one to p1. For points in the scalar ring, lineMap_apply_ring gives (1 - c) * p0 + c * p1. The definition requires a ring, a module over an additive commutative group, and an affine torsor; it has no distinct-endpoint premise.",
+      "source_refs": [],
+      "content": "informal_content/affine-line-maps.md"
+    },
+    "Pairwise independence on a finite index set": {
+      "id": "Pairwise independence on a finite index set",
+      "tier": 2,
+      "parent": "Elementary probability and convexity bounds",
+      "kind": "definition",
+      "description": "Pairwise binary independence of a family on a Finset, together with the bridge from mutual iIndepFun independence.",
+      "depends_on": [
+        "Independent family of random variables"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "ProbabilityTheory.IndepFun",
+        "ProbabilityTheory.iIndepFun.indepFun"
+      ],
+      "mathlib_file": "Mathlib/Probability/Independence/Basic.lean",
+      "mathlib_notes": "Verified in the pinned checkout. Pairwise independence on a Finset s is Set.Pairwise on the coerced set with binary IndepFun as the relation. The theorem iIndepFun.indepFun turns mutual independence into each binary independence statement for distinct indices, and therefore into the finite-set pairwise condition. Neither predicate includes function measurability, and no probability-measure instance is assumed.",
+      "source_refs": [
+        {
+          "file": "sources/ltfp_book.pdf",
+          "location": "Chapter 1, Section 1.2, printed page 8, independent-sum variance display"
+        }
+      ],
+      "content": "informal_content/pairwise-independence-on-a-finite-index-set.md"
+    },
+    "Extended pseudometric distance and balls": {
+      "id": "Extended pseudometric distance and balls",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Extended-valued pseudometric distance, separation, and extended closed balls.",
+      "depends_on": [],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "EDist",
+        "EDist.edist",
+        "PseudoEMetricSpace",
+        "EMetricSpace",
+        "edist_self",
+        "edist_comm",
+        "edist_triangle",
+        "edist_eq_zero",
+        "Metric.closedEBall",
+        "Metric.mem_closedEBall",
+        "Metric.mem_closedEBall'",
+        "Metric.closedEBall_top"
+      ],
+      "mathlib_file": "Mathlib/Topology/EMetricSpace/Defs.lean",
+      "mathlib_notes": "Independently verified in the pinned checkout. PseudoEMetricSpace has ENNReal-valued edist with zero self-distance, symmetry, and triangle inequality, allowing top and zero distance between distinct points. EMetricSpace adds separation and edist_eq_zero. closedEBall takes arbitrary ENNReal radius; closedEBall_top proves the top-radius ball is univ.",
+      "source_refs": [],
+      "content": "informal_content/extended-pseudometric-distance-and-balls.md"
+    },
+    "Open-measurable and Borel spaces": {
+      "id": "Open-measurable and Borel spaces",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Compatibility between topological open sets and a measurable-space structure.",
+      "depends_on": [
+        "Measurable spaces and sets"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "borel",
+        "OpensMeasurableSpace",
+        "BorelSpace",
+        "opensMeasurableSpace_iff_forall_measurableSet",
+        "IsOpen.measurableSet",
+        "IsClosed.measurableSet"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/Constructions/BorelSpace/Basic.lean",
+      "mathlib_notes": "Independently verified in the pinned checkout. borel is generated by opens. OpensMeasurableSpace is borel <= ambient and is equivalent to every open set being measurable; closed measurability follows by complements. BorelSpace is equality and supplies OpensMeasurableSpace. No measure, separation, or countability assumption is involved.",
+      "source_refs": [],
+      "content": "informal_content/open-measurable-and-borel-spaces.md"
+    },
+    "Countably generated measurable spaces": {
+      "id": "Countably generated measurable spaces",
+      "tier": 2,
+      "parent": "Metric and measure-theoretic geometry",
+      "kind": "definition",
+      "description": "Measurable spaces generated by a countable family, with chosen family and sequence witnesses.",
+      "depends_on": [
+        "Measurable spaces and sets"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "MeasurableSpace.generateFrom",
+        "MeasurableSpace.CountablyGenerated",
+        "MeasurableSpace.countableGeneratingSet",
+        "MeasurableSpace.countable_countableGeneratingSet",
+        "MeasurableSpace.generateFrom_countableGeneratingSet",
+        "MeasurableSpace.natGeneratingSequence",
+        "MeasurableSpace.generateFrom_natGeneratingSequence"
+      ],
+      "mathlib_file": "Mathlib/MeasureTheory/MeasurableSpace/CountablyGenerated.lean",
+      "mathlib_notes": "Independently verified in the pinned checkout. CountablyGenerated asserts generation by a countable family. countableGeneratingSet is a chosen family with the empty set inserted, so it is nonempty without Nonempty alpha; natGeneratingSequence is a chosen enumeration whose range generates the ambient structure. generateFrom itself is in Mathlib/MeasureTheory/MeasurableSpace/Defs.lean. No measure or topology is assumed.",
+      "source_refs": [],
+      "content": "informal_content/countably-generated-measurable-spaces.md"
+    },
+    "Rolle's theorem for real derivatives": {
+      "id": "Rolle's theorem for real derivatives",
+      "tier": 2,
+      "parent": "Deterministic quadrature error",
+      "kind": "theorem",
+      "description": "A continuous real function with equal endpoint values has an interior point with zero derivative.",
+      "depends_on": [
+        "Frechet derivative"
+      ],
+      "mathlib_status": "in-mathlib",
+      "mathlib_declarations": [
+        "exists_hasDerivAt_eq_zero",
+        "exists_deriv_eq_zero"
+      ],
+      "mathlib_file": "Mathlib/Analysis/Calculus/LocalExtr/Rolle.lean",
+      "mathlib_notes": "Verified in the pinned checkout. For a < b, continuity on Icc, equal endpoint values, and a HasDerivAt witness at every interior point, exists_hasDerivAt_eq_zero returns c in Ioo with the witnessed derivative equal to zero. exists_deriv_eq_zero uses totalized deriv and therefore omits an explicit differentiability premise; genuine-derivative arguments should use the HasDerivAt version.",
+      "source_refs": [],
+      "content": "informal_content/rolles-theorem-for-real-derivatives.md"
     }
   }
 }

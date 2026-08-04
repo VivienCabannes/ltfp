@@ -7,8 +7,16 @@
       "fingerprint_sha256": "832bcdbb93f77b4601c33ca39733f35d4100457bba0dddb7aa36fee3f9d6d6e1"
     },
     {
+      "parent": "Deterministic quadrature error",
+      "fingerprint_sha256": "0a030da65ac0b25f10cf2bd15d9db46409ff34271ab729cb594c426d9ab48fe8"
+    },
+    {
       "parent": "Differential and integral calculus",
       "fingerprint_sha256": "34fdd7c4b2bc4551624d1824dca36c27cc826ded115bd577bf03356a2d7a12f7"
+    },
+    {
+      "parent": "Elementary probability and convexity bounds",
+      "fingerprint_sha256": "076c28364a76a70409eedeec36e8d5c6e99bc9fc0a83d2af7245d7efd0caa68e"
     },
     {
       "parent": "Finite-dimensional linear algebra and spectral theory",
@@ -17,6 +25,10 @@
     {
       "parent": "Measure-theoretic probability and conditional expectation",
       "fingerprint_sha256": "21216c110ec078f0efb4004291c741aace8efa0feccd056762182e92393d671e"
+    },
+    {
+      "parent": "Metric and measure-theoretic geometry",
+      "fingerprint_sha256": "ff09a6e8da10c23140f0a038abc23181b05e8d1d54cfa0ea78fbc36e055473fc"
     }
   ]
 }

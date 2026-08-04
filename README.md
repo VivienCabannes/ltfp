@@ -12,23 +12,25 @@ no project axioms, and no `sorry` in completed milestones.
 
 Autoform Phase 1 is complete and approved. Phase 2 statement-level planning
 started on August 4, 2026 under the pinned-primary-source policy recorded in
-`sources/phase2_approval.json`. The live graph currently has 178 nodes and 567
-edges. All four initial foundation clusters have passed Mathlib, graph, and
-content review and are pinned in the content-complete scope: five
+`sources/phase2_approval.json`. The live graph currently has 227 nodes and 661
+edges. Seven dependency-ready clusters have passed Mathlib, graph, and content
+review and are pinned in the content-complete scope: five
 finite-dimensional linear-algebra statements, 12 calculus statements, 23
 probability and conditional-expectation statements, and 22 convex-analysis and
-normed-geometry statements. The fine graph is acyclic. Reclassifying integral
-Jensen as a probability/expectation bridge also makes the represented tier-1
-quotient acyclic without deleting any fine dependency.
+normed-geometry statements, 21 metric and measure-geometry statements, 16
+elementary probability and convexity statements, and 12 deterministic
+quadrature statements. The fine graph is acyclic. Reclassifying integral Jensen
+as a probability/expectation bridge also makes the represented tier-1 quotient
+acyclic without deleting any fine dependency.
 
 The converged tier-1 map has 116 clusters and 461 dependency edges in one
 connected acyclic graph. Every cluster reaches a verified Mathlib root, all 209
 book exercises have an owner, and all 225 representing links carry
 machine-checked exercise identifiers. The Phase 2 registry tracks those 225
-fine obligations explicitly and marks all of them pending until their exact
-tier-2 nodes land. Two independent holistic-review waves found no remaining
-coarse-map blocker; the final graph and review record are pinned in
-`sources/phase1_review_attestation.json`.
+fine obligations explicitly. Six obligations covering Exercises 1.9-1.11 and
+1.26-1.28 are mapped to reviewed tier-2 nodes; 219 remain pending. Two
+independent holistic-review waves found no remaining coarse-map blocker; the
+final graph and review record are pinned in `sources/phase1_review_attestation.json`.
 
 The live graph is stored in `graph.json`. Source ambiguities that affect formal
 statements are recorded in `sources/formalization_notes.md`; proof obligations
