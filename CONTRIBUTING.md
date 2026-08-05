@@ -1,8 +1,10 @@
 # Contributing
 
 Contributions to the formalization of *Learning Theory from First Principles*
-are welcome. Coordinate substantial work against `graph.json` first so that
-parallel contributions use the same definitions and dependency order.
+are welcome. Coordinate substantial work against the Markdown roadmap under
+`blueprint/` so that parallel contributions use the same definitions and
+dependency order. The attested `graph.json` and its existing audit files remain
+part of the Phase 1/2 verification boundary until those checks are migrated.
 
 ## Development Requirements
 
@@ -27,6 +29,7 @@ python3 scripts/check_exercise_coverage.py
 python3 scripts/check_informal_content.py --mode incremental \
   --scope sources/phase2_content_scope.json
 python3 scripts/check_lean_hygiene.py
+uv run --project "$AUTOFORM_PLUGIN_ROOT" autoform check blueprint --lean-root .
 lake exe mk_all --check
 lake build
 ```

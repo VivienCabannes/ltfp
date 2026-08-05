@@ -36,21 +36,66 @@ automation:
       runs: 0
     notes: 'Phase 1 used Autoform for planning, Mathlib correspondence audits,
       and graph review. The token and run counters above are proof-worker
-      telemetry: no proof-worker run has started. Planning-agent telemetry is
-      not represented by these counters.'
+      telemetry: no Autoform proof-worker run has started. Planning-agent
+      telemetry is not represented by these counters.'
+  - method: agent
+    models:
+    - claude-opus-5
+    framework: claude-code
+    tool_setup: 'Claude Code workflow orchestration: per-module implementation
+      agents iterating against lake, then independent adversarial reviewers
+      running statement-to-specification comparison, #print axioms audits, and
+      code-quality review; final integration and gates run by the orchestrator'
+    cost:
+      wall_time: '~35 min wall clock on 2026-08-05'
+      spend_usd: ''
+      hardware: local macOS workstation, 16 cores
+    tokens:
+      input: 0
+      output: 0
+      runs: 16
+    notes: 'Wrote the first Lean modules: the fourteen tier-2 statements of the
+      content-complete clusters that pinned Mathlib does not provide. The
+      harness reported about 1.19M subagent tokens across the 16 agent runs
+      without an input/output split, so the counters above are left at zero
+      rather than guessed.'
   spend_usd: ''
   notes: 'Phase 1 planning completed on 2026-08-03. The user approved the
     attested roadmap and pinned-primary-source policy on 2026-08-04; Phase 2
-    statement-level planning is authorized. No proof-worker run has started.'
+    statement-level planning is authorized. The first Lean declarations landed
+    on 2026-08-05 through the Claude Code method above; no Autoform
+    proof-worker run has started.'
 status:
   scope: Entire 15-chapter book (which has no appendix section), plus the separate
     exercise collection and the additional exercises embedded in Chapters 10-15
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: []
-  main_results: []
+  main_results:
+  - trapezoidal_error_eq_bernoulli_kernel
+  - abs_trapezoidal_error_le_of_periodic
+  - isBigO_trapezoidal_error_of_periodic
+  - abs_trapezoidal_error_le_of_deriv_bound
+  - isBigO_trapezoidal_error_of_deriv_bound
+  - abs_sub_affinePanelInterp_le
+  - integral_sub_trapezoidal_integral_eq_sum_integral_residual
+  - sum_integral_affinePanelInterp
+  - ProbabilityTheory.variance_sampleMean
+  - ProbabilityTheory.integral_sampleMean_sub_integral_sq
+  - ProbabilityTheory.measureReal_abs_sampleMean_sub_integral_gt_le
+  - ProbabilityTheory.tendstoInMeasure_sampleMean
+  - MeasureTheory.ae_mul_indicator_lt_le_of_ae_nonneg
+  - MeasureTheory.measure_lt_sSup_range_le_tsum'
 fidelity:
-  divergences: ''
+  divergences: 'No new source divergence. The Lean statements transcribe the
+    reviewed tier-2 statements, whose own divergences are already recorded in
+    their content files. Two conventions are worth restating: Mathlib''s
+    trapezoidal_error is the estimator minus the integral, the opposite
+    orientation to the book''s error, so both signed forms are recorded and the
+    absolute errors agree; and where a source-facing statement is weaker than
+    what its proof establishes, the general lemma and the exact source-facing
+    statement are both recorded, with unconsumed source hypotheses kept and
+    underscore-prefixed.'
 review:
   status: unchecked
   reviewers: []
@@ -58,6 +103,16 @@ review:
     planning graph was independently reviewed and is attested separately in
     sources/phase1_review_attestation.json; that graph review is not evidence
     of source-faithfulness, proof-integrity, or code-quality review of Lean
-    declarations.'
+    declarations. The 2026-08-05 Lean modules did pass an automated review wave
+    inside the session that wrote them: each module was checked by a separate
+    reviewer agent, with no human reviewer, that recompiled the module, compared
+    every statement against its frozen tier-2 specification hypothesis by
+    hypothesis, audited #print axioms for every public declaration, and hunted
+    for vacuity and statement drift. The wave reported no blocker and no major
+    finding against the Lean code; its minor findings, and two false claims it
+    found in the accompanying documentation, were applied. Its transcripts are
+    not archived in this repository, so that report is not independently
+    verifiable here, and it is not a substitute for the faithfulness,
+    proof-integrity, and code-quality reviews required by the roadmap.'
 alignment: {}
 acknowledgements: ''

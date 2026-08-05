@@ -17,6 +17,13 @@ __pycache__/
 /*.json.lock
 ## Blueprint
 /blueprint_export/
+/site-src/
+/site/
+/blueprint/.obsidian/
+/blueprint/.trash/
+/blueprint/dependencies.md
+/blueprint/dependencies.html
+/blueprint/graph.html
 /blueprint/print/print.log
 /blueprint/web/
 /blueprint/src/web.paux

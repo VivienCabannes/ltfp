@@ -1,0 +1,34 @@
+site_name: Learning Theory from First Principles in Lean
+site_description: Autoform roadmap and theorem dependency graph
+site_url: https://viviencabannes.github.io/ltfp/
+repo_url: https://github.com/VivienCabannes/ltfp
+
+# `autoform render` derives this tree from blueprint/. The Markdown vault is
+# the source of truth; site-src/ is always regenerated.
+docs_dir: site-src
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: mkdocs
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - stylesheets/blueprint.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js
+  - javascripts/blueprint-mermaid.js

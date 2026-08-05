@@ -11,6 +11,11 @@ This is a large formalization. A realistic full-coverage schedule is measured in
 person-years rather than weeks; the graph and milestone gates are designed so
 useful, reviewable libraries land well before the final theorem is complete.
 
+Presentation note: the approved scope is now published from the Markdown vault
+under `blueprint/`. References below to blueprint export or the interactive
+dashboard describe the legacy `graph.json` pipeline retained for the existing
+Phase 1/2 audit boundary.
+
 ## Quality Contract
 
 A milestone is complete only when:
