@@ -4,6 +4,8 @@ This project formalizes the mathematical content of Francis Bach's
 *Learning Theory from First Principles* in Lean 4, including all fifteen
 chapters, the embedded exercises, and the separate exercise collection.
 
+**Blueprint:** [Browse the formalization blueprint](blueprint/README.md).
+
 The target is Mathlib-quality code: reusable definitions, theorem statements at
 the right level of generality, explicit analytic and measurability hypotheses,
 no project axioms, and no `sorry` in completed milestones.
@@ -96,8 +98,9 @@ separate exercise collection are nevertheless within the source audit.
 
 See `ROADMAP.md` for the staged formalization strategy and quality gates. The
 Autoform Markdown vault is the human-editable roadmap; its rendered MkDocs site
-adds leanblueprint-style statement environments, derived statuses, source-code
-permalinks, and a Mermaid dependency graph.
+adds a book overview, aggregate progress, leanblueprint-style statement
+environments, source-code permalinks, and project-, chapter-, local-, and
+full-DAG dependency maps.
 
 With `AUTOFORM_PLUGIN_ROOT` set to the installed Autoform plugin checkout,
 validate and build the presentation with:

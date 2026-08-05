@@ -7,12 +7,14 @@ on:
       - "blueprint/**"
       - "**.lean"
       - "mkdocs.yml"
+      - "theme/**"
       - ".github/workflows/deploy-pages.yml"
   pull_request:
     paths:
       - "blueprint/**"
       - "**.lean"
       - "mkdocs.yml"
+      - "theme/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
@@ -37,12 +39,12 @@ jobs:
 
       - name: Validate the theorem DAG and its declarations
         run: >-
-          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@ee753a3ecf1bfbdcef4a67cfb90dd89462679ffa
+          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@2c3150e8d6f001d907b5c597dad531ce66a7aab2
           autoform check blueprint --lean-root .
 
       - name: Render the blueprint
         run: >-
-          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@ee753a3ecf1bfbdcef4a67cfb90dd89462679ffa
+          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@2c3150e8d6f001d907b5c597dad531ce66a7aab2
           autoform render blueprint
           --output site-src
           --lean-root .

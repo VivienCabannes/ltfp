@@ -13,7 +13,7 @@ leanblueprint-style presentation.
 - [Roadmap](roadmap/README.md)
 - [Coverage](coverage/README.md)
 - [Source map](sources/README.md)
-- [Dependency graph](dependencies.md) (generated locally and on GitHub Pages)
+- [Dependency maps](dependencies.md) (generated locally and on GitHub Pages)
 
 ## Current state
 
