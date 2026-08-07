@@ -4,7 +4,7 @@ This project formalizes the mathematical content of Francis Bach's
 *Learning Theory from First Principles* in Lean 4, including all fifteen
 chapters, the embedded exercises, and the separate exercise collection.
 
-**Blueprint:** [Browse the formalization blueprint](blueprint/README.md).
+**Blueprint:** [Browse the published formalization blueprint](https://viviencabannes.github.io/ltfp/).
 
 Developed with [AutoformBot](https://github.com/facebookresearch/autoform-bot).
 
