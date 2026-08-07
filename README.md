@@ -6,6 +6,8 @@ chapters, the embedded exercises, and the separate exercise collection.
 
 **Blueprint:** [Browse the formalization blueprint](blueprint/README.md).
 
+Developed with [AutoformBot](https://github.com/facebookresearch/autoform-bot).
+
 The target is Mathlib-quality code: reusable definitions, theorem statements at
 the right level of generality, explicit analytic and measurability hypotheses,
 no project axioms, and no `sorry` in completed milestones.

@@ -64,7 +64,7 @@ jobs:
 
       - name: Validate Autoform blueprint
         run: >-
-          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@2c3150e8d6f001d907b5c597dad531ce66a7aab2
+          uvx --from git+https://github.com/VivienCabannes/autoform-bot.git@fb8d540dc1dadc6c8d870d5897b2c38b5a2cc603
           autoform check blueprint --lean-root .
 
       - name: Validate formalization plan
